@@ -9,7 +9,6 @@ public class Enemy : MonoBehaviour
     public EnemyState state;
 
     public float speed;
-    public bool inRadius;
 
     Rigidbody2D rb;
     Collider2D boxCollider;
@@ -29,7 +28,7 @@ public class Enemy : MonoBehaviour
         InvokeRepeating("ChangeDirection", 3f, 3f);
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         switch (type)
         {
@@ -47,9 +46,9 @@ public class Enemy : MonoBehaviour
     //Move The Enemy
     void Move(float speed)
     {
-        Vector3 dir = new Vector2(1, 0);
+        rb.velocity = new Vector2(speed, rb.velocity.y) ;
 
-        rb.MovePosition(transform.position + dir * speed * Time.fixedDeltaTime);
+        //rb.MovePosition(transform.position + Vector3.right * speed * Time.fixedDeltaTime);
     }
 
     //Change Direction
