@@ -59,7 +59,7 @@ public class PlayerMovement : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(ray.origin, Vector2.down, RayLength, GroundLayer);
             Debug.DrawRay(ray.origin, Vector2.down * RayLength, Color.red, 5);
 
-            Debug.Log(ray.origin);
+            //Debug.Log(ray.origin);
 
             if (hit)
             { //Debug.Log("Hitting Ground");
