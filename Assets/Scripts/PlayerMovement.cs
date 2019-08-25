@@ -56,13 +56,13 @@ public class PlayerMovement : MonoBehaviour
             Ray2D ray = new Ray2D();
             ray.origin = transform.position + bottomleft + Vector3.right * (i) * DistanceBetweenRays;
 
-            RaycastHit2D hit = Physics2D.Raycast(ray.origin, Vector2.down, bottomleft.y + RayLength, GroundLayer);
+            RaycastHit2D hit = Physics2D.Raycast(ray.origin, Vector2.down, RayLength, GroundLayer);
             Debug.DrawRay(ray.origin, Vector2.down * RayLength, Color.red, 5);
 
-            //bnm Debug.Log(bottomleft);
+            Debug.Log(ray.origin);
 
             if (hit)
-            {//Debug.Log("Hitting Ground");
+            { //Debug.Log("Hitting Ground");
                 return true;
             }
         }//Debug.Log("Did not hit ground");
