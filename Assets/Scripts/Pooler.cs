@@ -41,7 +41,7 @@ public class Pooler : MonoBehaviour
 
     }
 
-    public GameObject SpawnFromPool(string tag, Vector3 position, Quaternion rotation, int damage)
+    public GameObject SpawnFromPool(string tag, Vector3 position, Quaternion rotation)
     {
         if (!DictionaryPool.ContainsKey(tag)) { Debug.LogWarning("Pool with tag " + tag + " does not exist"); return null; }
 
