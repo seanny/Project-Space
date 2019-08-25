@@ -2,6 +2,7 @@
 using System.Collections;
 using UnityEngine.SceneManagement;
 
+[RequireComponent(typeof(BoxCollider2D))]
 public class Door : MonoBehaviour
 {
     public int SceneToUnloadBuildIndex;
