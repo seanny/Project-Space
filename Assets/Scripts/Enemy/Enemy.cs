@@ -13,6 +13,8 @@ public class Enemy : MonoBehaviour
     Rigidbody2D rb;
     Collider2D boxCollider;
 
+    SpriteRenderer sprite;
+
     #region Constructor
     public Enemy(EnemyType aType, float aSpeed)
     {
@@ -25,6 +27,8 @@ public class Enemy : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        sprite = GetComponentInChildren<SpriteRenderer>();
+
         InvokeRepeating("ChangeDirection", 3f, 3f);
     }
 
@@ -36,7 +40,7 @@ public class Enemy : MonoBehaviour
                 Move(speed);
 
                 break;
-            case EnemyType.Tank:
+            case EnemyType.Shooter:
 
                 break;
         }
@@ -47,14 +51,17 @@ public class Enemy : MonoBehaviour
     void Move(float speed)
     {
         rb.velocity = new Vector2(speed, rb.velocity.y) ;
-
-        //rb.MovePosition(transform.position + Vector3.right * speed * Time.fixedDeltaTime);
     }
 
     //Change Direction
     void ChangeDirection()
     {
         speed = speed * -1;
+
+        if (speed > 0)
+            sprite.flipX = true;
+        else
+            sprite.flipX = false;
     }
 
 }
@@ -63,7 +70,7 @@ public class Enemy : MonoBehaviour
 public enum EnemyType
 {
     Patrol,
-    Tank
+    Shooter
 }
 
 //Which state te enemy is in
