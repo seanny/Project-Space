@@ -42,6 +42,11 @@ public class Dialog : MonoBehaviour
             {
                 EndDialog();
             }
+        } else
+        {
+            StopAllCoroutines();
+            textDisplay.text = lines[sentenceindex];
+            inDialog = false;
         }
     }
 
