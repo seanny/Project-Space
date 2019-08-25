@@ -43,7 +43,7 @@ public class PlayerMovement : MonoBehaviour
         SpriteHeight = sp.bounds.extents.y;
     }
     
-    private bool IsGrounded()
+    public bool IsGrounded()
     {
         int FunctionAmountOfRaysToCheckIfGrounded = AmountOfRaysToCheckIfGrounded -1;
         float RayLength = 0.1f;
