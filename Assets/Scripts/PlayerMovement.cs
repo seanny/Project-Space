@@ -13,11 +13,17 @@ public class PlayerMovement : MonoBehaviour
     private float TargetSpeed;
     private float HorizontalInput;
 
+    public float JustPressedJumpTime;
+    private float PressedJumpTime;
+    [Range(0,1)]public float JumpFallMultiplier;
+
     Rigidbody2D rb;
     SpriteRenderer sp;
 
     float SpriteWidth;
     float SpriteHeight;
+
+    bool facingRight = false;
 
     public int AmountOfRaysToCheckIfGrounded;
     public LayerMask GroundLayer;
@@ -39,26 +45,27 @@ public class PlayerMovement : MonoBehaviour
     
     private bool IsGrounded()
     {
-        AmountOfRaysToCheckIfGrounded = 2;
-        float RayLength = 0.2f;
-        Debug.Log("Checking if grounded");
+        int FunctionAmountOfRaysToCheckIfGrounded = AmountOfRaysToCheckIfGrounded -1;
+        float RayLength = 0.1f;
+        //Debug.Log("Checking if grounded");
         Vector3 bottomleft = new Vector3(-SpriteWidth, -SpriteHeight, 0);
         float DistanceBetweenRays = 2 * SpriteWidth / AmountOfRaysToCheckIfGrounded;
-
+        
         for (int i = 0; i <= AmountOfRaysToCheckIfGrounded; i++)
         {
-            RaycastHit2D hit = Physics2D.Raycast(transform.position + bottomleft + Vector3.right * (i) * DistanceBetweenRays, Vector2.down, bottomleft.y + RayLength, GroundLayer);
-            Debug.DrawRay(transform.position + bottomleft + Vector3.right * (i) * DistanceBetweenRays, Vector2.down * RayLength, Color.red, 9999);
-            Debug.Log(bottomleft);
-            if (hit)
-            {
+            Ray2D ray = new Ray2D();
+            ray.origin = transform.position + bottomleft + Vector3.right * (i) * DistanceBetweenRays;
 
-                Debug.Log("Hitting Ground");
+            RaycastHit2D hit = Physics2D.Raycast(ray.origin, Vector2.down, bottomleft.y + RayLength, GroundLayer);
+            Debug.DrawRay(ray.origin, Vector2.down * RayLength, Color.red, 5);
+
+            //bnm Debug.Log(bottomleft);
+
+            if (hit)
+            {//Debug.Log("Hitting Ground");
                 return true;
             }
-        
-        }
-        Debug.Log("Did not hit ground");
+        }//Debug.Log("Did not hit ground");
         return false;
     }
 
@@ -70,16 +77,40 @@ public class PlayerMovement : MonoBehaviour
         else { TargetSpeed = MoveSpeed; }
 
         rb.velocity = new Vector2(HorizontalInput * TargetSpeed, rb.velocity.y);
+
+        if (facingRight == false && HorizontalInput > 0 || facingRight == true && HorizontalInput < 0)
+        {
+            FlipDirections();
+        }
         #endregion
 
         #region Jumping
-        if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
+        if (Input.GetKeyDown(KeyCode.Space)) { PressedJumpTime = JustPressedJumpTime; }
+        if (PressedJumpTime >= 0) { PressedJumpTime -= Time.fixedDeltaTime; }
+        
+        if (rb.velocity.y > 0)
         {
+            if (!Input.GetKey(KeyCode.Space))
+            {
+                rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * JumpFallMultiplier);
+            }
+        }
+
+        if ((PressedJumpTime >= 0) && IsGrounded())
+        {
+            PressedJumpTime = 0f;
             rb.velocity = Vector2.up * JumpForce;
         }
         #endregion
     }
 
+    void FlipDirections()
+    {
+        facingRight = !facingRight;
+        Vector3 FlipScale = transform.localScale;
+        FlipScale *= -1;
+        transform.localScale = FlipScale;
+    }
 
 
 }
