@@ -11,8 +11,24 @@ public class PlayerCombat : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        
+        if (Input.GetMouseButtonDown(0))
+        {
+            Attack();
+        }
+    }
+
+    void Attack()
+    {
+
     }
 }
+
+[HideInInspector] public enum AttackToDo
+{
+    melee,
+    ranged,
+    nothing
+}
+    

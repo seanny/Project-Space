@@ -24,6 +24,6 @@ public class GameManager : MonoBehaviour
     }
 
 
-    public GameObject player;
+    [HideInInspector] public GameObject player;
 
 }

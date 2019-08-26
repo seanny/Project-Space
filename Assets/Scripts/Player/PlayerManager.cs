@@ -30,6 +30,7 @@ public class PlayerManager : MonoBehaviour
     
     public PlayerMovement movement { get; private set; }
     public PlayerSpriteManagement spriteManagement { get; private set; }
+    private BoxCollider2D bc;
 
     private void Start()
     {
