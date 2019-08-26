@@ -11,7 +11,12 @@ public class PlayerSpriteManagement : MonoBehaviour
     public Sprite endJumpSprite;
 
     private SpriteRenderer m_SpriteRenderer;
-    
+    private PlayerCombat m_PlayerCombat;
+
+    private void OnEnable()
+    {
+    }
+
     // Start is called before the first frame update
     private void Start()
     {
@@ -35,6 +40,7 @@ public class PlayerSpriteManagement : MonoBehaviour
     private void InitRenderer()
     {
         m_SpriteRenderer = GetComponent<SpriteRenderer>();
+        m_PlayerCombat = GetComponent<PlayerCombat>();
     }
 
     private void SetIdleSprite()

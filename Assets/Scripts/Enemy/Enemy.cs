@@ -2,14 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody2D))]
 public class Enemy : MonoBehaviour
 {
     [Header("Enums")]
     public EnemyType type;
-    public EnemyState state;
+    private EnemyState state;
+
+    [Header("Stats")]
+    public int health;
+    internal int maxHealth;
 
     [Header("Patrol Variables")]
     public float movSpeed;
+    public int changeDirectionTime;
 
     [Header("Shooter Variables")]
     public int shotSpeed;
@@ -18,24 +24,18 @@ public class Enemy : MonoBehaviour
     Rigidbody2D rb;
     SpriteRenderer sprite;
 
-    #region Constructor
-    public Enemy(EnemyType aType, float aSpeed)
-    {
-        type = aType;
-        movSpeed = aSpeed;
-
-    }
-    #endregion
-
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         sprite = GetComponentInChildren<SpriteRenderer>();
 
+        maxHealth = health;
+
         if (type.Equals(EnemyType.Patrol))
         {
-            InvokeRepeating("ChangeDirection", 3f, 3f);
+            InvokeRepeating("ChangeDirection", changeDirectionTime, changeDirectionTime);
         }
+
     }
 
     private void FixedUpdate()
@@ -50,6 +50,11 @@ public class Enemy : MonoBehaviour
                 CheckPlayerPosition();
             break;
         }    
+    }
+
+    public virtual void ReceiveDamage(int dmgAmount)
+    {
+        health -= dmgAmount;
     }
 
     #region Patrol
@@ -85,7 +90,7 @@ public class Enemy : MonoBehaviour
 
     
      //Check which direction the player should shoot
-    void CheckPlayerPosition()
+    public void CheckPlayerPosition()
     {
         if (GameManager.instance.player.transform.position.x < transform.position.x)
         {
@@ -120,7 +125,8 @@ public class Enemy : MonoBehaviour
 public enum EnemyType
 {
     Patrol,
-    Shooter
+    Shooter,
+    Morpher
 }
 
 //Which state te enemy is in
