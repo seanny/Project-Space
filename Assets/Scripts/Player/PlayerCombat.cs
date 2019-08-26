@@ -2,11 +2,6 @@
 
 public class PlayerCombat : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
 
     public delegate void SwitchWeapon();
     public static event SwitchWeapon SwitchingWeapon;
@@ -20,12 +15,14 @@ public class PlayerCombat : MonoBehaviour
         {
 
         }
-    }
 
-    void SwitchWeaponToAttack()
-    {
-        SwitchingWeapon?.Invoke();
+        if (Input.GetMouseButtonDown(1))
+        {
+            Debug.Log("Switching Weapon");
+            SwitchingWeapon?.Invoke();
+        }
     }
+    
 
     void OnDestroy()
     {
@@ -43,10 +40,11 @@ public class PlayerCombat : MonoBehaviour
         {
             case AttackToDo.melee: attacktodo = AttackToDo.ranged; break;
 
-            case AttackToDo.ranged: attacktodo = AttackToDo.melee; break;
+            case AttackToDo.ranged: attacktodo = AttackToDo.nothing; break;
 
-            case AttackToDo.nothing: Debug.Log("Doing Nothing"); break;
+            case AttackToDo.nothing: attacktodo = AttackToDo.melee; break;
         }
+        
     }
 
     

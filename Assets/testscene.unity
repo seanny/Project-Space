@@ -1509,10 +1509,35 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1822280525839401624, guid: e3910b83e1bad164c8b83218991bd4b7,
+        type: 3}
+      propertyPath: JumpForce
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1822280525839401626, guid: e3910b83e1bad164c8b83218991bd4b7,
         type: 3}
       propertyPath: m_UsedByComposite
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1822280525839401626, guid: e3910b83e1bad164c8b83218991bd4b7,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1822280525839401626, guid: e3910b83e1bad164c8b83218991bd4b7,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1822280525839401626, guid: e3910b83e1bad164c8b83218991bd4b7,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 2.78
+      objectReference: {fileID: 0}
+    - target: {fileID: 1822280525839401626, guid: e3910b83e1bad164c8b83218991bd4b7,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 3.79
       objectReference: {fileID: 0}
     - target: {fileID: 8184273289918458778, guid: e3910b83e1bad164c8b83218991bd4b7,
         type: 3}

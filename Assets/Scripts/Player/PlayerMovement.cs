@@ -46,15 +46,17 @@ public class PlayerMovement : MonoBehaviour
     public bool IsGrounded()
     {
         int FunctionAmountOfRaysToCheckIfGrounded = AmountOfRaysToCheckIfGrounded -1;
-        float RayLength = 0.1f;
+        float RayLength = 0.2f;
         //Debug.Log("Checking if grounded");
-        Vector3 bottomleft = new Vector3(-SpriteWidth, -SpriteHeight, 0);
+        Vector3 bottomleft = new Vector3(-SpriteWidth/2, -SpriteHeight, 0);
         float DistanceBetweenRays = 2 * SpriteWidth / AmountOfRaysToCheckIfGrounded;
         
         for (int i = 0; i <= AmountOfRaysToCheckIfGrounded; i++)
         {
-            Ray2D ray = new Ray2D();
-            ray.origin = transform.position + bottomleft + Vector3.right * (i) * DistanceBetweenRays;
+            Ray2D ray = new Ray2D
+            {
+                origin = transform.position + bottomleft + Vector3.right * (i) * DistanceBetweenRays
+            };
 
             RaycastHit2D hit = Physics2D.Raycast(ray.origin, Vector2.down, RayLength, GroundLayer);
             Debug.DrawRay(ray.origin, Vector2.down * RayLength, Color.red, 5);
