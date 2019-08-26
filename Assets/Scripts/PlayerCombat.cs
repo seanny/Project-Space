@@ -4,12 +4,8 @@ using UnityEngine;
 
 public class PlayerCombat : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
+<<<<<<< HEAD
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -23,6 +19,8 @@ public class PlayerCombat : MonoBehaviour
     {
 
     }
+=======
+>>>>>>> 5d9d67edf074d8e689d72ecc30c8a1ab3cca69a6
 }
 
 [HideInInspector] public enum AttackToDo
