@@ -1,7 +1,7 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class Dialog : MonoBehaviour
 {
@@ -11,15 +11,21 @@ public class Dialog : MonoBehaviour
     public float TimeBetweenLetters;
     private bool inDialog;
 
+    public GameObject TextBox;
+    public GameObject ContinueButton;
+    private Image im;
 
     private void Start()
     {
+        im = TextBox.GetComponent<Image>();
         StartCoroutine(TypeSentences());
     }
 
     public IEnumerator TypeSentences()
     {
         textDisplay.text = "";
+        im.enabled = true;
+        ContinueButton.gameObject.SetActive(true);
         inDialog = true;
         foreach (char letters in lines[sentenceindex].ToCharArray())
         {
@@ -53,5 +59,8 @@ public class Dialog : MonoBehaviour
     void EndDialog()
     {
         Debug.Log("Ending Dialog");
+        im.enabled = false;
+        ContinueButton.gameObject.SetActive(false);
+        textDisplay.text = "";
     }
 }
