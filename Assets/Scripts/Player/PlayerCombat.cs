@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.Events;
+﻿using UnityEngine;
 
 public class PlayerCombat : MonoBehaviour
 {
@@ -14,34 +11,48 @@ public class PlayerCombat : MonoBehaviour
     public delegate void SwitchWeapon();
     public static event SwitchWeapon SwitchingWeapon;
 
+    public AttackToDo attacktodo = AttackToDo.nothing;
+
     // Update is called once per frame
     void FixedUpdate()
     {
         if (Input.GetMouseButtonDown(0))
         {
-            Attack();
+
         }
+    }
+
+    void SwitchWeaponToAttack()
+    {
+        SwitchingWeapon?.Invoke();
     }
 
     void OnDestroy()
     {
+        SwitchingWeapon -= SwitchWeaponAttack;
+    }
+
+    private void OnEnable()
+    {
         SwitchingWeapon += SwitchWeaponAttack;
     }
-    
+
     void SwitchWeaponAttack()
     {
+        switch (attacktodo)
+        {
+            case AttackToDo.melee: attacktodo = AttackToDo.ranged; break;
 
+            case AttackToDo.ranged: attacktodo = AttackToDo.melee; break;
+
+            case AttackToDo.nothing: Debug.Log("Doing Nothing"); break;
+        }
     }
 
-    void Attack()
-    {
-
-    }
-
+    
     
 }
 
-[HideInInspector]
 public enum AttackToDo
 {
     melee,
