@@ -78,7 +78,7 @@ public class Enemy : MonoBehaviour
 
     #region Shooter
     //Shoot
-    void Shoot()
+    public void Shoot()
     {
         GameObject bullet = Pooler.instance.SpawnFromPool("Normal", transform.position, transform.rotation);
 
