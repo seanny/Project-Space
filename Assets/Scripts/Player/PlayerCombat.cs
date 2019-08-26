@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerCombat : MonoBehaviour
 {
@@ -9,6 +10,9 @@ public class PlayerCombat : MonoBehaviour
     {
 
     }
+
+    public delegate void SwitchWeapon();
+    public static event SwitchWeapon SwitchingWeapon;
 
     // Update is called once per frame
     void FixedUpdate()
@@ -19,10 +23,22 @@ public class PlayerCombat : MonoBehaviour
         }
     }
 
+    void OnDestroy()
+    {
+        SwitchingWeapon += SwitchWeaponAttack;
+    }
+    
+    void SwitchWeaponAttack()
+    {
+
+    }
+
     void Attack()
     {
 
     }
+
+    
 }
 
 [HideInInspector]
