@@ -267,7 +267,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 809351004}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 949047692}
+        m_MethodName: StartGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &809351004
@@ -515,7 +526,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.66200006, y: 0.38661113}
   m_AnchorMax: {x: 0.90356255, y: 0.46461114}
-  m_AnchoredPosition: {x: 2.6000004, y: 0.5}
+  m_AnchoredPosition: {x: 2.600006, y: 0.5}
   m_SizeDelta: {x: -5.200012, y: 2.699997}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1524523352
@@ -761,8 +772,8 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Play
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c96f1ba0330def740bb4cbd2211b1eb6, type: 2}
-  m_sharedMaterial: {fileID: -7658158141912539574, guid: c96f1ba0330def740bb4cbd2211b1eb6,
+  m_fontAsset: {fileID: 11400000, guid: 2b9002707fdda70438425dec474bb17a, type: 2}
+  m_sharedMaterial: {fileID: -5045574882506390186, guid: 2b9002707fdda70438425dec474bb17a,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -919,8 +930,8 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Exit
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c96f1ba0330def740bb4cbd2211b1eb6, type: 2}
-  m_sharedMaterial: {fileID: -7658158141912539574, guid: c96f1ba0330def740bb4cbd2211b1eb6,
+  m_fontAsset: {fileID: 11400000, guid: 2b9002707fdda70438425dec474bb17a, type: 2}
+  m_sharedMaterial: {fileID: -5045574882506390186, guid: 2b9002707fdda70438425dec474bb17a,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1077,8 +1088,8 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Name of the game goes here
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c96f1ba0330def740bb4cbd2211b1eb6, type: 2}
-  m_sharedMaterial: {fileID: -7658158141912539574, guid: c96f1ba0330def740bb4cbd2211b1eb6,
+  m_fontAsset: {fileID: 11400000, guid: 2b9002707fdda70438425dec474bb17a, type: 2}
+  m_sharedMaterial: {fileID: -5045574882506390186, guid: 2b9002707fdda70438425dec474bb17a,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1104,7 +1115,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 72
+  m_fontSize: 68.05
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
