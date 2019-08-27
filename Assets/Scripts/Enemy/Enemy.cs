@@ -5,6 +5,9 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class Enemy : MonoBehaviour
 {
+    [Header("Player Layer")]
+    public LayerMask playerLayer;
+
     [Header("Enums")]
     public EnemyType type;
     private EnemyState state;
@@ -20,6 +23,10 @@ public class Enemy : MonoBehaviour
     [Header("Shooter Variables")]
     public int shotSpeed;
     public bool playerSpotted;
+
+    [Header("HitBox Parameters")]
+    public Transform attackSpawnPos;
+    public Vector2 MeleeAttackParameters;
 
     Rigidbody2D rb;
     SpriteRenderer sprite;
@@ -86,6 +93,8 @@ public class Enemy : MonoBehaviour
 
         projectileRB.velocity = Vector2.right * shotSpeed;
 
+        Debug.Log(gameObject.name + " is Shooting");
+
     }
 
     
@@ -117,6 +126,37 @@ public class Enemy : MonoBehaviour
             InvokeRepeating("Shoot", 0f, 3f);
         }
     }
+    #endregion
+
+    #region Melee Attack
+    void Attack()
+    {
+        Collider2D[] hitColliders = Physics2D.OverlapBoxAll(attackSpawnPos.position, MeleeAttackParameters, 0, playerLayer);
+
+        foreach (Collider2D col in hitColliders)
+        {
+            Debug.Log("Hit: " + col.gameObject.name);
+        }
+        Debug.Log(gameObject.name + " Attacked!");
+    }
+
+    #endregion
+
+    #region FollowPlayer
+
+    public void FollowPlayer()
+    {
+        Vector2 playerPos = GameManager.instance.gameObject.transform.position;
+
+        Vector2 movPos = playerPos - new Vector2(gameObject.transform.position.x, gameObject.transform.position.y);
+
+        Vector2 convertedPos = new Vector2(movPos.x, rb.velocity.y);
+
+        rb.velocity = convertedPos;
+
+        Debug.Log("Following");
+    }
+
     #endregion
 
 }
