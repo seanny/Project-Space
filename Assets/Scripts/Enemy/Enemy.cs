@@ -146,13 +146,18 @@ public class Enemy : MonoBehaviour
 
     public void FollowPlayer()
     {
-        Vector2 playerPos = GameManager.instance.gameObject.transform.position;
+        Vector2 playerPos = GameManager.instance.player.transform.position;
 
-        Vector2 movPos = (playerPos - (Vector2)transform.position).normalized;
+        Vector2 movDir = (playerPos - (Vector2)rb.transform.position).normalized;
 
-        Vector2 convertedPos = new Vector2(movPos.x, rb.velocity.y);
+        Vector2 convertedPos = new Vector2(movDir.x, rb.velocity.y);
 
-        rb.velocity = convertedPos;
+        rb.velocity = convertedPos * movSpeed; 
+
+        /*if (Vector2.Distance(playerPos, rb.transform.position) > 0.09f)
+        {
+            rb.MovePosition((Vector2)rb.transform.position + movDir * movSpeed * Time.fixedDeltaTime);
+        }*/
 
         Debug.Log("Following");
     }
