@@ -29,7 +29,7 @@ public class PlayerSpriteManagement : MonoBehaviour
     {
         if (PlayerManager.Instance.movement.IsGrounded() != true)
         {
-            m_SpriteRenderer.sprite = middleJumpSprite;
+            //m_SpriteRenderer.sprite = middleJumpSprite;
         }
         else
         {
@@ -45,6 +45,6 @@ public class PlayerSpriteManagement : MonoBehaviour
 
     private void SetIdleSprite()
     {
-        m_SpriteRenderer.sprite = idleSprite;
+        //m_SpriteRenderer.sprite = idleSprite;
     }
 }

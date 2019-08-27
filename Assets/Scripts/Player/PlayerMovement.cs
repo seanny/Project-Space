@@ -32,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
 
-        sp = GetComponent<SpriteRenderer>();
+        sp = GetComponentInChildren<SpriteRenderer>();
         CalculateSpriteBoundaries();
         
     }
@@ -42,32 +42,31 @@ public class PlayerMovement : MonoBehaviour
         SpriteWidth = sp.bounds.extents.x;
         SpriteHeight = sp.bounds.extents.y;
     }
-    
+
     public bool IsGrounded()
     {
-        int FunctionAmountOfRaysToCheckIfGrounded = AmountOfRaysToCheckIfGrounded -1;
-        float RayLength = 0.2f;
+        int FunctionAmountOfRaysToCheckIfGrounded = AmountOfRaysToCheckIfGrounded - 1;
+        float RayLength = 0.3f;
         //Debug.Log("Checking if grounded");
-        Vector3 bottomleft = new Vector3(-SpriteWidth/2, -SpriteHeight, 0);
+        Vector3 bottomleft = new Vector3(-SpriteWidth / 2, -SpriteHeight, 0);
         float DistanceBetweenRays = 2 * SpriteWidth / AmountOfRaysToCheckIfGrounded;
-        
+
         for (int i = 0; i <= AmountOfRaysToCheckIfGrounded; i++)
         {
             Ray2D ray = new Ray2D
             {
-                origin = transform.position + bottomleft + Vector3.right * (i) * DistanceBetweenRays
+                origin = new Vector2(transform.position.x + bottomleft.x + (i) * DistanceBetweenRays, transform.position.y)
             };
-
             RaycastHit2D hit = Physics2D.Raycast(ray.origin, Vector2.down, RayLength, GroundLayer);
             Debug.DrawRay(ray.origin, Vector2.down * RayLength, Color.red, 5);
-
             //Debug.Log(ray.origin);
-
+            //Debug.Log(bottomleft);
             if (hit)
             { //Debug.Log("Hitting Ground");
                 return true;
             }
-        }//Debug.Log("Did not hit ground");
+        //Debug.Log("Did not hit ground");
+        }
         return false;
     }
 
@@ -85,6 +84,7 @@ public class PlayerMovement : MonoBehaviour
             FlipDirections();
         }
         #endregion
+        
 
         #region Jumping
         if (Input.GetKeyDown(KeyCode.Space)) { PressedJumpTime = JustPressedJumpTime; }
@@ -98,10 +98,13 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-        if ((PressedJumpTime >= 0) && IsGrounded())
+        if (PressedJumpTime >= 0)
         {
-            PressedJumpTime = 0f;
-            rb.velocity = Vector2.up * JumpForce;
+            if (IsGrounded())
+            {
+                PressedJumpTime = JustPressedJumpTime;
+                rb.velocity = Vector2.up * JumpForce;
+            }
         }
         #endregion
     }
