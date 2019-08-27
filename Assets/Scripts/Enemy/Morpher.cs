@@ -21,12 +21,6 @@ public class Morpher : Enemy
             default:
                 break;
         }
-
-        if (health < maxHealth / 2 && !mode.Equals(MorpherMode.Ranged))
-        {
-            mode = MorpherMode.Ranged;
-            InvokeRepeating("Shoot", 0f, 3f);
-        }
     }
 
     public override void ReceiveDamage(int dmgAmount)

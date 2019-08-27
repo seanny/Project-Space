@@ -58,7 +58,7 @@ public class PlayerMovement : MonoBehaviour
                 origin = new Vector2(transform.position.x + bottomleft.x + (i) * DistanceBetweenRays, transform.position.y)
             };
             RaycastHit2D hit = Physics2D.Raycast(ray.origin, Vector2.down, RayLength, GroundLayer);
-            Debug.DrawRay(ray.origin, Vector2.down * RayLength, Color.red, 5);
+            //Debug.DrawRay(ray.origin, Vector2.down * RayLength, Color.red, 5);
             //Debug.Log(ray.origin);
             //Debug.Log(bottomleft);
             if (hit)
