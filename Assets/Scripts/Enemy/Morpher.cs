@@ -32,6 +32,8 @@ public class Morpher : Enemy
             mode = MorpherMode.Ranged;
             InvokeRepeating("Shoot", 0f, 3f);
         }
+
+        Debug.Log("Damaged");
     }
 
 }

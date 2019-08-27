@@ -198,7 +198,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e10a1503fd54ae94bbcfc5b53646283b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pools: []
+  pools:
+  - tag: Normal
+    prefab: {fileID: 5968461480441709196, guid: 0821e2f839b0247459fb7dd1f87c4e74,
+      type: 3}
+    size: 5
+  - tag: PlayerBullet
+    prefab: {fileID: 5968461480441709196, guid: 0821e2f839b0247459fb7dd1f87c4e74,
+      type: 3}
+    size: 5
 --- !u!4 &313027633
 Transform:
   m_ObjectHideFlags: 0
