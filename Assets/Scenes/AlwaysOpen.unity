@@ -151,9 +151,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MainMenuParent: {fileID: 493573499}
   startdialog:
-  - You are a spaceman
-  - Go help fix the world
-  - Do it please
+  - You are a spaceman for the forces of good.
+  - Recently some chaos has been happening in space.
+  - You must go investigate. Leave the ship by exiting to the right.
   player: {fileID: 0}
 --- !u!4 &34533444
 Transform:
