@@ -19,8 +19,10 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
             return;
-        } 
-        
+        }
+
+        player = FindObjectOfType<PlayerMovement>().gameObject;
+
     }
 
     private bool startinggame;

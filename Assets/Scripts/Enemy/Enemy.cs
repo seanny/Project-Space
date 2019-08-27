@@ -148,7 +148,7 @@ public class Enemy : MonoBehaviour
     {
         Vector2 playerPos = GameManager.instance.gameObject.transform.position;
 
-        Vector2 movPos = playerPos - new Vector2(gameObject.transform.position.x, gameObject.transform.position.y);
+        Vector2 movPos = (playerPos - (Vector2)transform.position).normalized;
 
         Vector2 convertedPos = new Vector2(movPos.x, rb.velocity.y);
 
