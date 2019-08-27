@@ -5,9 +5,9 @@ using UnityEngine;
 public class Morpher : Enemy
 {
     [Header("Mode")]
-    private MorpherMode mode;
+    public MorpherMode mode;
 
-    private void Update()
+    private void FixedUpdate()
     {
         CheckPlayerPosition();
 
@@ -16,9 +16,16 @@ public class Morpher : Enemy
             case MorpherMode.Ranged:
                 break;
             case MorpherMode.Melee:
+                FollowPlayer();
                 break;
             default:
                 break;
+        }
+
+        if (health < maxHealth / 2 && !mode.Equals(MorpherMode.Ranged))
+        {
+            mode = MorpherMode.Ranged;
+            InvokeRepeating("Shoot", 0f, 3f);
         }
     }
 
@@ -26,7 +33,7 @@ public class Morpher : Enemy
     {
         base.ReceiveDamage(dmgAmount);
 
-        if (health < health/2 && !mode.Equals(MorpherMode.Ranged))
+        if (health < maxHealth/2 && !mode.Equals(MorpherMode.Ranged))
         {
             mode = MorpherMode.Ranged;
             InvokeRepeating("Shoot", 0f, 3f);
