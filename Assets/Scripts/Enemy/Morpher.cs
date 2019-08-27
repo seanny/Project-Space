@@ -6,7 +6,6 @@ public class Morpher : Enemy
 {
     [Header("Mode")]
     public MorpherMode mode;
-
     private void FixedUpdate()
     {
         CheckPlayerPosition();
@@ -25,15 +24,19 @@ public class Morpher : Enemy
 
     public override void ReceiveDamage(int dmgAmount)
     {
-        base.ReceiveDamage(dmgAmount);
-
-        if (health < maxHealth/2 && !mode.Equals(MorpherMode.Ranged))
+        
+        if (health < maxHealth/2 && !mode.Equals(MorpherMode.Ranged) && playerCombat.attacktodo.Equals(AttackToDo.ranged))
         {
             mode = MorpherMode.Ranged;
             InvokeRepeating("Shoot", 0f, 3f);
+
+            base.ReceiveDamage(dmgAmount);
         }
 
-        Debug.Log("Damaged");
+        if (mode.Equals(MorpherMode.Ranged) && playerCombat.attacktodo.Equals(AttackToDo.melee))
+        {
+            base.ReceiveDamage(dmgAmount);
+        }
     }
 
 }

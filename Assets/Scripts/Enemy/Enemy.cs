@@ -30,11 +30,15 @@ public class Enemy : MonoBehaviour
 
     Rigidbody2D rb;
     SpriteRenderer sprite;
+    internal PlayerCombat playerCombat;
+    internal GameObject player;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         sprite = GetComponentInChildren<SpriteRenderer>();
+        player = GameManager.instance.player.gameObject;
+        playerCombat = player.GetComponent<PlayerCombat>();
 
         maxHealth = health;
 
@@ -147,7 +151,7 @@ public class Enemy : MonoBehaviour
 
     public void FollowPlayer()
     {
-        Vector2 playerPos = GameManager.instance.player.transform.position;
+        Vector2 playerPos = player.transform.position;
 
         Vector2 movDir = (playerPos - (Vector2)rb.transform.position).normalized;
 
