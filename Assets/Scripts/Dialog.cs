@@ -25,17 +25,18 @@ public class Dialog : MonoBehaviour
     {
         textDisplay.text = "";
         im.enabled = true;
+        Time.timeScale = 0f;
         ContinueButton.gameObject.SetActive(true);
         inDialog = true;
         foreach (char letters in lines[sentenceindex].ToCharArray())
         {
             textDisplay.text += letters;
-            yield return new WaitForSeconds(TimeBetweenLetters);
+            yield return new WaitForSecondsRealtime(TimeBetweenLetters);
         }
 
         inDialog = false;
     }
-
+    
     public void ContinueDialog()
     {
         if (!inDialog)
@@ -62,5 +63,6 @@ public class Dialog : MonoBehaviour
         im.enabled = false;
         ContinueButton.gameObject.SetActive(false);
         textDisplay.text = "";
+        Time.timeScale = 1f;
     }
 }
