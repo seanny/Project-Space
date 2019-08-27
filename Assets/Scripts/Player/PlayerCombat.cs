@@ -10,7 +10,7 @@ public class PlayerCombat : MonoBehaviour
     public AttackToDo attacktodo = AttackToDo.nothing;
 
     public Transform MeleeAttackSpawnPos;
-    public GameObject RangedAttackSpawnPos;
+    public Transform RangedAttackSpawnPos;
     public Vector2 MeleeAttackParameters;
     public LayerMask EnemyLayer;
 
@@ -48,6 +48,11 @@ public class PlayerCombat : MonoBehaviour
         Debug.Log("Swinging");
     }
 
+    void RangedAttack()
+    {
+        Pooler.instance.SpawnFromPool("PlayerBullet", RangedAttackSpawnPos.position, Quaternion.identity);
+    }
+
     private void OnDrawGizmosSelected()
     {
         Gizmos.DrawLine(MeleeAttackSpawnPos.position, new Vector2(MeleeAttackSpawnPos.position.x + MeleeAttackParameters.x / 2, MeleeAttackSpawnPos.position.y));
@@ -56,10 +61,7 @@ public class PlayerCombat : MonoBehaviour
         Gizmos.DrawLine(MeleeAttackSpawnPos.position, new Vector2(MeleeAttackSpawnPos.position.x, -MeleeAttackParameters.y / 2 + MeleeAttackSpawnPos.position.y));
     }
 
-    void RangedAttack()
-    {
-
-    }
+  
     
 
     void OnDestroy()
