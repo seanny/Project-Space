@@ -14,6 +14,8 @@ public class PlayerCombat : MonoBehaviour
     public Vector2 MeleeAttackParameters;
     public LayerMask EnemyLayer;
 
+    public int damage;
+
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -43,6 +45,7 @@ public class PlayerCombat : MonoBehaviour
         foreach (Collider2D enemy in hitEnemies)
         {
             Debug.Log("Hitting enemy");
+            enemy.GetComponent<Enemy>().ReceiveDamage(damage);
         }
 
         Debug.Log("Swinging");
