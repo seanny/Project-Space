@@ -11,18 +11,9 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     private void Awake()
     {
-        if (instance == null)
-        {
+        
             instance = this;
-        }
-        else
-        {
-            Destroy(gameObject);
-            return;
-        }
-
-        player = FindObjectOfType<PlayerMovement>().gameObject;
-
+        
     }
 
     public List<string> startdialog;
@@ -54,8 +45,8 @@ public class GameManager : MonoBehaviour
         Dialog.instance.InitializeDialog(startdialog);
         Fader.instance.FadeIn();
         player = FindObjectOfType<PlayerMovement>().gameObject;
-        yield return new WaitForSecondsRealtime(1f);
         Time.timeScale = 1f;
+        yield return new WaitForSecondsRealtime(1f);
         startinggame = false;
     }
 

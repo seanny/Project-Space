@@ -31,10 +31,12 @@ public class Dialog : MonoBehaviour
 
     public IEnumerator TypeSentences()
     {
+
+        yield return null;
+        Time.timeScale = 0f;
         DialogSystem.SetActive(true);
         textDisplay.text = "";
         im.enabled = true;
-        Time.timeScale = 0f;
         ContinueButton.gameObject.SetActive(true);
         inDialog = true;
         foreach (char letters in lines[sentenceindex].ToCharArray())
