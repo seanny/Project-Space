@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
@@ -6,7 +7,7 @@ using UnityEngine.UI;
 public class Dialog : MonoBehaviour
 {
     public TextMeshProUGUI textDisplay;
-    public string[] lines;
+    public List<string> lines;
     private int sentenceindex;
     public float TimeBetweenLetters;
     private bool inDialog;
@@ -14,15 +15,23 @@ public class Dialog : MonoBehaviour
     public GameObject TextBox;
     public GameObject ContinueButton;
     private Image im;
+    public GameObject DialogSystem;
+
+    public static Dialog instance;
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     private void Start()
     {
         im = TextBox.GetComponent<Image>();
-        StartCoroutine(TypeSentences());
     }
 
     public IEnumerator TypeSentences()
     {
+        DialogSystem.SetActive(true);
         textDisplay.text = "";
         im.enabled = true;
         Time.timeScale = 0f;
@@ -41,11 +50,11 @@ public class Dialog : MonoBehaviour
     {
         if (!inDialog)
         {
-            if (sentenceindex < lines.Length - 1)
+            if (sentenceindex < lines.Count - 1)
             {
                 sentenceindex++;
                 StartCoroutine(TypeSentences());
-            } else if (sentenceindex == lines.Length - 1)
+            } else if (sentenceindex == lines.Count - 1)
             {
                 EndDialog();
             }
@@ -64,5 +73,16 @@ public class Dialog : MonoBehaviour
         ContinueButton.gameObject.SetActive(false);
         textDisplay.text = "";
         Time.timeScale = 1f;
+    }
+
+    public void InitializeDialog(List<string> sentences)
+    {
+        lines.Clear();
+        for(int i = 0; i < sentences.Count; i++)
+        {
+            lines.Add(sentences[i]);
+        }
+
+        StartCoroutine(TypeSentences());
     }
 }

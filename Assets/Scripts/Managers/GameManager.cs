@@ -25,6 +25,8 @@ public class GameManager : MonoBehaviour
 
     }
 
+    public List<string> startdialog;
+
     private bool startinggame;
 
     [HideInInspector] public GameObject player;
@@ -49,6 +51,7 @@ public class GameManager : MonoBehaviour
         {
             yield return null;
         }
+        Dialog.instance.InitializeDialog(startdialog);
         Fader.instance.FadeIn();
         player = FindObjectOfType<PlayerMovement>().gameObject;
         yield return new WaitForSecondsRealtime(1f);
