@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8822583049125912052}
   - component: {fileID: 8822583049125912042}
   - component: {fileID: 7852973275623485060}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68,12 +68,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ba7ee7c439576c46986a043210b8f3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 0
   type: 0
-  state: 0
+  health: 0
   movSpeed: 3
   changeDirectionTime: 0
   shotSpeed: 6
   playerSpotted: 0
+  attackSpawnPos: {fileID: 0}
+  MeleeAttackParameters: {x: 0, y: 0}
 --- !u!70 &7852973275623485060
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

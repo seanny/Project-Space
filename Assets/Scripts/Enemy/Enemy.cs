@@ -61,6 +61,7 @@ public class Enemy : MonoBehaviour
 
     public virtual void ReceiveDamage(int dmgAmount)
     {
+        Debug.Log(gameObject.name + " received Damage!");
         health -= dmgAmount;
     }
 
@@ -158,8 +159,6 @@ public class Enemy : MonoBehaviour
         {
             rb.MovePosition((Vector2)rb.transform.position + movDir * movSpeed * Time.fixedDeltaTime);
         }*/
-
-        Debug.Log("Following");
     }
 
     #endregion
