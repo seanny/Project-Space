@@ -5,6 +5,8 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
 
+    public GameObject MainMenuParent;
+
     public static GameManager instance;
     private void Awake()
     {
@@ -36,6 +38,7 @@ public class GameManager : MonoBehaviour
         Fader.instance.FadeOut();
         Time.timeScale = 0;
         yield return new WaitForSecondsRealtime(1f);
+        MainMenuParent.SetActive(false);
         Fader.instance.FadeIn();
         yield return new WaitForSecondsRealtime(1f);
         Time.timeScale = 1f;
