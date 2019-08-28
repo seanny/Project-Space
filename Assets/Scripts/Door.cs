@@ -10,6 +10,11 @@ public class Door : MonoBehaviour
 
     public bool fadetoscene;
 
+    private void Start()
+    {
+        CurrentLevel = SceneManager.GetActiveScene().name;
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player")
@@ -18,6 +23,9 @@ public class Door : MonoBehaviour
         }
 
     }
+
+    public string PreviousLevel;
+    private string CurrentLevel;
 
     IEnumerator SceneTransitions()
     {
@@ -29,11 +37,35 @@ public class Door : MonoBehaviour
             Fader.instance.FadeOut();
             yield return new WaitForSecondsRealtime(1f);
 
-            AsyncOperation load = SceneManager.LoadSceneAsync(SceneToLoadBuildIndex, LoadSceneMode.Additive);
-            while (!load.isDone) { yield return new WaitForEndOfFrame(); }
-            AsyncOperation unload = SceneManager.UnloadSceneAsync(SceneToUnloadBuildIndex, UnloadSceneOptions.None);
-            while (!unload.isDone) { yield return new WaitForEndOfFrame(); }
-            Debug.Log("Test");
+            if (SceneToLoadBuildIndex != 999)
+            {
+                AsyncOperation load = SceneManager.LoadSceneAsync(SceneToLoadBuildIndex, LoadSceneMode.Additive);
+                while (!load.isDone) { yield return new WaitForEndOfFrame(); }
+            }
+
+            if (SceneToLoadBuildIndex != 999)
+            {
+                AsyncOperation unload = SceneManager.UnloadSceneAsync(SceneToUnloadBuildIndex, UnloadSceneOptions.None);
+                while (!unload.isDone) { yield return new WaitForEndOfFrame(); }
+            }
+
+
+            object[] obj = FindObjectsOfType(typeof(GameObject));
+            foreach (object o in obj)
+            {
+                GameObject g = (GameObject)o;
+
+                if (g.GetComponent<Door>() != null)
+                {
+                    g.GetComponent<Door>();
+
+                    if (g.GetComponent<Door>().PreviousLevel.Equals(CurrentLevel))
+                    {
+                        GameManager.instance.player.transform.position = g.transform.position;
+                    }
+                }
+                
+            }
 
             Time.timeScale = 1f;
             Fader.instance.FadeIn();
