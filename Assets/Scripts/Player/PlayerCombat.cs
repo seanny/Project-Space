@@ -31,10 +31,14 @@ public class PlayerCombat : MonoBehaviour
             }
         }
 
+       
+    }
+    private void Update()
+    {
         if (Input.GetMouseButtonDown(1))
         {
             Debug.Log("Switching Weapon");
-            SwitchingWeapon?.Invoke();
+            SwitchingWeapon();
         }
     }
 
@@ -77,15 +81,21 @@ public class PlayerCombat : MonoBehaviour
         SwitchingWeapon += SwitchWeaponAttack;
     }
 
-    public void SwitchWeaponAttack()
+    void SwitchWeaponAttack()
     {
         switch (attacktodo)
         {
-            case AttackToDo.melee: attacktodo = AttackToDo.ranged; break;
+            case AttackToDo.melee:
+                attacktodo = AttackToDo.ranged;
+                break;
 
-            case AttackToDo.ranged: attacktodo = AttackToDo.nothing; break;
+            case AttackToDo.ranged:
+                attacktodo = AttackToDo.nothing;
+                break;
 
-            case AttackToDo.nothing: attacktodo = AttackToDo.melee; break;
+            case AttackToDo.nothing:
+                attacktodo = AttackToDo.melee;
+                break;
         }
         
     }
