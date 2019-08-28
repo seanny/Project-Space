@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     {
         
             instance = this;
-
+        
     }
 
     public List<string> startdialog;
@@ -32,6 +32,7 @@ public class GameManager : MonoBehaviour
 
     IEnumerator StartingGame()
     {
+        DialogHeardBefore.instance.intro = true;
         startinggame = true;
         Fader.instance.FadeOut();
         Time.timeScale = 0;
@@ -44,8 +45,8 @@ public class GameManager : MonoBehaviour
         }
         Dialog.instance.InitializeDialog(startdialog);
         Fader.instance.FadeIn();
-        player = FindObjectOfType<PlayerMovement>().gameObject;
         Time.timeScale = 1f;
+        player = FindObjectOfType<PlayerMovement>().gameObject;
         yield return new WaitForSecondsRealtime(1f);
         startinggame = false;
     }

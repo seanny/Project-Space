@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerSpriteManagement : MonoBehaviour
 {
-    public Sprite idleSprite;
+    /* public Sprite idleSprite;
     public List<Sprite> walkingSprites;
     public Sprite startJumpSprite;
     public Sprite middleJumpSprite;
@@ -47,4 +47,5 @@ public class PlayerSpriteManagement : MonoBehaviour
     {
         //m_SpriteRenderer.sprite = idleSprite;
     }
+    */
 }
