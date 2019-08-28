@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
     float SpriteWidth;
     float SpriteHeight;
 
-    bool facingRight = false;
+    bool facingRight = true;
 
     public int AmountOfRaysToCheckIfGrounded;
     public LayerMask GroundLayer;
