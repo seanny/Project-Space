@@ -13,6 +13,7 @@ public class PlayerSpriteManagement : MonoBehaviour
     private SpriteRenderer m_SpriteRenderer;
     private PlayerCombat m_PlayerCombat;
     Animator anim;
+    Rigidbody2D rb;
 
     private void OnEnable()
     {
@@ -27,13 +28,13 @@ public class PlayerSpriteManagement : MonoBehaviour
 
     private void Update()
     {
-        if (PlayerManager.Instance.movement.IsGrounded() != true)
+        if(rb.velocity.x != 0)
         {
-            //m_SpriteRenderer.sprite = middleJumpSprite;
+            anim.SetBool("Walking", true);
         }
         else
         {
-            SetIdleSprite();
+            anim.SetBool("Walking", false);
         }
     }
 
@@ -42,6 +43,7 @@ public class PlayerSpriteManagement : MonoBehaviour
         m_SpriteRenderer = GetComponent<SpriteRenderer>();
         m_PlayerCombat = GetComponent<PlayerCombat>();
         anim = GetComponentInChildren<Animator>();
+        rb = GetComponent<Rigidbody2D>();
 
         PlayerCombat.SwitchingWeapon += SwitchWeaponSprite;
     }
