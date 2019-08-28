@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
     float SpriteWidth;
     float SpriteHeight;
 
-    bool facingRight = false;
+    bool facingRight = true;
 
     public int AmountOfRaysToCheckIfGrounded;
     public LayerMask GroundLayer;
@@ -60,7 +60,7 @@ public class PlayerMovement : MonoBehaviour
                 origin = new Vector2(transform.position.x + bottomleft.x + (i) * DistanceBetweenRays, transform.position.y)
             };
             RaycastHit2D hit = Physics2D.Raycast(ray.origin, Vector2.down, RayLength, GroundLayer);
-            //Debug.DrawRay(ray.origin, Vector2.down * RayLength, Color.red, 5);
+            Debug.DrawRay(ray.origin, Vector2.down * RayLength, Color.red, 5);
             //Debug.Log(ray.origin);
             //Debug.Log(bottomleft);
             if (hit)
@@ -89,7 +89,12 @@ public class PlayerMovement : MonoBehaviour
         
 
         #region Jumping
-        if (Input.GetKeyDown(KeyCode.Space)) { PressedJumpTime = JustPressedJumpTime; }
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            PressedJumpTime = JustPressedJumpTime;
+            Debug.Log("Jump");
+
+        }
         if (PressedJumpTime >= 0) { PressedJumpTime -= Time.fixedDeltaTime; }
         
         if (rb.velocity.y > 0)

@@ -35,6 +35,7 @@ public class PlayerSpriteManagement : MonoBehaviour
         else
         {
             anim.SetBool("Walking", false);
+
         }
     }
 
