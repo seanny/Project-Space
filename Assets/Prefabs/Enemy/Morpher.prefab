@@ -12,12 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 981ba251ba5f1ed438648f542117bc34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 0
   type: 2
-  health: 50
+  health: 15
   movSpeed: 0
   changeDirectionTime: 0
   shotSpeed: 0
   playerSpotted: 0
+  attackSpawnPos: {fileID: 0}
+  MeleeAttackParameters: {x: 0, y: 0}
   mode: 0
 --- !u!1001 &7608628160697687582
 PrefabInstance:

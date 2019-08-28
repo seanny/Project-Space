@@ -76,6 +76,7 @@ public class Enemy : MonoBehaviour
 
     IEnumerator Death()
     {
+        type = EnemyType.Dead;
         rb.velocity = Vector2.zero;
         yield return new WaitForSeconds(2f);
         Destroy(gameObject);
@@ -186,7 +187,8 @@ public enum EnemyType
 {
     Patrol,
     Shooter,
-    Morpher
+    Morpher,
+    Dead
 }
 
 //Which state te enemy is in
