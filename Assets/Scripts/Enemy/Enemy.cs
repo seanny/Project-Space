@@ -37,7 +37,9 @@ public class Enemy : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         sprite = GetComponentInChildren<SpriteRenderer>();
+
         player = GameManager.instance.player.gameObject;
+        
         playerCombat = player.GetComponent<PlayerCombat>();
 
         maxHealth = health;
