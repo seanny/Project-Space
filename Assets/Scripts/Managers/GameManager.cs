@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     {
         
             instance = this;
-        
+
     }
 
     public List<string> startdialog;

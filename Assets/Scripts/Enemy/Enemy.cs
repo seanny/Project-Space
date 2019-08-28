@@ -67,6 +67,18 @@ public class Enemy : MonoBehaviour
     {
         Debug.Log(gameObject.name + " received Damage!");
         health -= dmgAmount;
+
+        if (health <= 0)
+        {
+            StartCoroutine(Death());
+        }
+    }
+
+    IEnumerator Death()
+    {
+        rb.velocity = Vector2.zero;
+        yield return new WaitForSeconds(2f);
+        Destroy(gameObject);
     }
 
     #region Patrol
