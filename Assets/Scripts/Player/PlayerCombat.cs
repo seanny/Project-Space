@@ -77,7 +77,7 @@ public class PlayerCombat : MonoBehaviour
         SwitchingWeapon += SwitchWeaponAttack;
     }
 
-    void SwitchWeaponAttack()
+    public void SwitchWeaponAttack()
     {
         switch (attacktodo)
         {

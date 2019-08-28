@@ -203,81 +203,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1001 &488656554
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1822280525839401628, guid: e3910b83e1bad164c8b83218991bd4b7,
-        type: 3}
-      propertyPath: m_Name
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 1822280525839401627, guid: e3910b83e1bad164c8b83218991bd4b7,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -3.6802099
-      objectReference: {fileID: 0}
-    - target: {fileID: 1822280525839401627, guid: e3910b83e1bad164c8b83218991bd4b7,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.04
-      objectReference: {fileID: 0}
-    - target: {fileID: 1822280525839401627, guid: e3910b83e1bad164c8b83218991bd4b7,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1822280525839401627, guid: e3910b83e1bad164c8b83218991bd4b7,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1822280525839401627, guid: e3910b83e1bad164c8b83218991bd4b7,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1822280525839401627, guid: e3910b83e1bad164c8b83218991bd4b7,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1822280525839401627, guid: e3910b83e1bad164c8b83218991bd4b7,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1822280525839401627, guid: e3910b83e1bad164c8b83218991bd4b7,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1822280525839401627, guid: e3910b83e1bad164c8b83218991bd4b7,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1822280525839401627, guid: e3910b83e1bad164c8b83218991bd4b7,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1822280525839401627, guid: e3910b83e1bad164c8b83218991bd4b7,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: e3910b83e1bad164c8b83218991bd4b7, type: 3}
---- !u!4 &990306699 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1822280525839401627, guid: e3910b83e1bad164c8b83218991bd4b7,
-    type: 3}
-  m_PrefabInstance: {fileID: 488656554}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1096087260
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -348,17 +273,17 @@ PrefabInstance:
     - target: {fileID: 1630921667370670736, guid: 982cf061dba480041aec932ed90026ed,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 3.3137
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1630921667370670736, guid: 982cf061dba480041aec932ed90026ed,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 3.3137
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1630921667370670736, guid: 982cf061dba480041aec932ed90026ed,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 3.3137
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 982cf061dba480041aec932ed90026ed, type: 3}
@@ -441,7 +366,7 @@ Transform:
   m_LocalScale: {x: 41.188377, y: 0.35818362, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1234902199
 BoxCollider2D:
@@ -504,7 +429,7 @@ MonoBehaviour:
   m_StreamingVersion: 20170927
   m_Priority: 10
   m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 990306699}
+  m_Follow: {fileID: 0}
   m_Lens:
     FieldOfView: 40
     OrthographicSize: 15
@@ -525,7 +450,7 @@ Transform:
   m_Children:
   - {fileID: 393010156}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2111466914
 GameObject:
