@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    
     public int Stamina;
     public float MoveSpeed;
     public float RunSpeed;

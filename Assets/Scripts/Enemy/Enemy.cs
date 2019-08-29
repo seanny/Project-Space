@@ -182,6 +182,19 @@ public class Enemy : MonoBehaviour
 
     #endregion
 
+
+    #region Deal Damage
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag.Equals("Player"))
+        {
+
+        }
+    }
+
+    #endregion
+
 }
 
 //Type of Enemy
