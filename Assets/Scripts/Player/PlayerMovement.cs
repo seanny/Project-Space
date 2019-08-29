@@ -35,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
         sp = GetComponentInChildren<SpriteRenderer>();
         CalculateSpriteBoundaries();
 
-        transform.parent = GameManager.instance.transform;
+        if (GameManager.instance != null) { transform.parent = GameManager.instance.transform; }
         
     }
 
