@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     public float MoveSpeed;
     public float RunSpeed;
     public float JumpForce;
+    public bool jumped;
 
     private float CurrentSpeed;
     private float TargetSpeed;
@@ -19,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
 
     Rigidbody2D rb;
     SpriteRenderer sp;
+
 
     float SpriteWidth;
     float SpriteHeight;
@@ -92,7 +94,6 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             PressedJumpTime = JustPressedJumpTime;
-            Debug.Log("Jump");
 
         }
         if (PressedJumpTime >= 0) { PressedJumpTime -= Time.fixedDeltaTime; }

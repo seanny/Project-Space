@@ -5,13 +5,10 @@ using UnityEngine;
 public class PlayerSpriteManagement : MonoBehaviour
 {
     public int currentIdleSprite = 0;
-    /*public List<Sprite> walkingSprites;
-    public Sprite startJumpSprite;
-    public Sprite middleJumpSprite;
-    public Sprite endJumpSprite;*/
 
     private SpriteRenderer m_SpriteRenderer;
     private PlayerCombat m_PlayerCombat;
+    private PlayerMovement m_PlayerMovement;
     Animator anim;
     Rigidbody2D rb;
 
@@ -28,21 +25,28 @@ public class PlayerSpriteManagement : MonoBehaviour
 
     private void Update()
     {
-        if(rb.velocity.x != 0)
+        if (rb.velocity.x != 0) { anim.SetBool("Walking", true); }
+        else { anim.SetBool("Walking", false); }
+
+        if (!m_PlayerMovement.IsGrounded())
         {
-            anim.SetBool("Walking", true);
+            anim.SetTrigger("Jump");
+            anim.SetBool("InAir", true);
         }
         else
         {
-            anim.SetBool("Walking", false);
-
+            anim.SetBool("InAir", false);
         }
+            
+
     }
+
 
     private void InitRenderer()
     {
         m_SpriteRenderer = GetComponent<SpriteRenderer>();
         m_PlayerCombat = GetComponent<PlayerCombat>();
+        m_PlayerMovement = GetComponent<PlayerMovement>();
         anim = GetComponentInChildren<Animator>();
         rb = GetComponent<Rigidbody2D>();
 
