@@ -36,6 +36,7 @@ public class PlayerSpriteManagement : MonoBehaviour
         else
         {
             anim.SetBool("InAir", false);
+            anim.ResetTrigger("Jump");
         }
             
 
