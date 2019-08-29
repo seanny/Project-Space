@@ -101,6 +101,42 @@ TextureImporter:
   - first:
       213: -4659291042136513145
     second: SpaceshipGround_32
+  - first:
+      213: 6258208233918482788
+    second: SpaceshipGround_33
+  - first:
+      213: -3351329822179300233
+    second: SpaceshipGround_34
+  - first:
+      213: -6871057522843961259
+    second: SpaceshipGround_35
+  - first:
+      213: 7592243994150062022
+    second: SpaceshipGround_36
+  - first:
+      213: -3361410667635364797
+    second: SpaceshipGround_37
+  - first:
+      213: -110102246458330158
+    second: SpaceshipGround_38
+  - first:
+      213: 8334938270614904698
+    second: SpaceshipGround_39
+  - first:
+      213: 7751301039090015741
+    second: SpaceshipGround_40
+  - first:
+      213: -2927766046508026291
+    second: SpaceshipGround_41
+  - first:
+      213: 6294782771000907331
+    second: SpaceshipGround_42
+  - first:
+      213: 2704528080138427354
+    second: SpaceshipGround_43
+  - first:
+      213: -5655337225135265869
+    second: SpaceshipGround_44
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -199,7 +235,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 906fa50961d118048a1f6b6978a93ef3
+      spriteID: ff12db3f87a2c52478b08f1c3f012c6d
       internalID: 4119190214586741488
       vertices: []
       indices: 
@@ -220,7 +256,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0400fe3b6d94f234980c3ea95f1ec371
+      spriteID: 8c2224044cad65c428c18c274459f7e7
       internalID: 2926178259149217229
       vertices: []
       indices: 
@@ -241,7 +277,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3e55aa3e6929b0f44be5548f2f31c8bc
+      spriteID: 74e4eaf0f0b648e4da155324485cf964
       internalID: -1304233532702615806
       vertices: []
       indices: 
@@ -262,7 +298,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 89813280b72b1bf49b1eb6452889381d
+      spriteID: 28675ea41ce087d4898891b7259b8210
       internalID: 7262349051264366042
       vertices: []
       indices: 
@@ -283,7 +319,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d5e1f0d9b76a88f42a4430522f7d7541
+      spriteID: 831524acda87a2f49a91287af92569c9
       internalID: 48279023142836609
       vertices: []
       indices: 
@@ -304,7 +340,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e857f16523166c64d8de7a7701be899c
+      spriteID: 7448e1e50899c5a4295eb5ec8db45493
       internalID: -2797685773996449415
       vertices: []
       indices: 
@@ -314,8 +350,8 @@ TextureImporter:
       name: SpaceshipGround_6
       rect:
         serializedVersion: 2
-        x: 0
-        y: 128
+        x: 192
+        y: 160
         width: 32
         height: 32
       alignment: 0
@@ -325,7 +361,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5b341151862e8e842b493f2e06666664
+      spriteID: 1ccae50b1a927494daac334150c4130d
       internalID: -889347023623083134
       vertices: []
       indices: 
@@ -335,8 +371,8 @@ TextureImporter:
       name: SpaceshipGround_7
       rect:
         serializedVersion: 2
-        x: 32
-        y: 128
+        x: 224
+        y: 160
         width: 32
         height: 32
       alignment: 0
@@ -346,7 +382,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 725151deeee6f92488a74ef3173f9187
+      spriteID: 248995c77a88aef4294e91aaf02fd64d
       internalID: 3864544953865923
       vertices: []
       indices: 
@@ -356,7 +392,7 @@ TextureImporter:
       name: SpaceshipGround_8
       rect:
         serializedVersion: 2
-        x: 64
+        x: 0
         y: 128
         width: 32
         height: 32
@@ -367,7 +403,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f308f7933aa06f04c841cf373c15adb6
+      spriteID: 987b58341cf80bc4ba49de2be1b2d8a3
       internalID: 7147622435613164751
       vertices: []
       indices: 
@@ -377,7 +413,7 @@ TextureImporter:
       name: SpaceshipGround_9
       rect:
         serializedVersion: 2
-        x: 96
+        x: 32
         y: 128
         width: 32
         height: 32
@@ -388,7 +424,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 83fa67c5385f7ed409e21c1b1f11a6ce
+      spriteID: 7b63ab294add2044eb8fdaae10ec9fa4
       internalID: 421209187997774487
       vertices: []
       indices: 
@@ -398,7 +434,7 @@ TextureImporter:
       name: SpaceshipGround_10
       rect:
         serializedVersion: 2
-        x: 128
+        x: 64
         y: 128
         width: 32
         height: 32
@@ -409,7 +445,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b7f66167da900b04abd4f942ac8750eb
+      spriteID: 8d84f52155e16c24e8fbe0d8427d7c89
       internalID: 6159529464410428444
       vertices: []
       indices: 
@@ -419,6 +455,27 @@ TextureImporter:
       name: SpaceshipGround_11
       rect:
         serializedVersion: 2
+        x: 96
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44d00c954f978b943976fbd968f8114d
+      internalID: 3185047761107916636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceshipGround_12
+      rect:
+        serializedVersion: 2
         x: 160
         y: 128
         width: 32
@@ -430,28 +487,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ebf6b7d7ab5d2f94a829f970e04b04f2
-      internalID: 3185047761107916636
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpaceshipGround_12
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dccc66b27e1342446b405c4a4fb06ac2
+      spriteID: 5778b12edea870e45b994e2246442ac1
       internalID: -4741465265033151243
       vertices: []
       indices: 
@@ -461,8 +497,8 @@ TextureImporter:
       name: SpaceshipGround_13
       rect:
         serializedVersion: 2
-        x: 32
-        y: 96
+        x: 192
+        y: 128
         width: 32
         height: 32
       alignment: 0
@@ -472,7 +508,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cc7406997b5007d4895c1b116b866987
+      spriteID: 6ad9d0b9b1cdbd148a5cc78a3b78c27f
       internalID: -8192884949108106639
       vertices: []
       indices: 
@@ -482,8 +518,8 @@ TextureImporter:
       name: SpaceshipGround_14
       rect:
         serializedVersion: 2
-        x: 64
-        y: 96
+        x: 224
+        y: 128
         width: 32
         height: 32
       alignment: 0
@@ -493,7 +529,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 21338334b1fbb7a4db683c2f5e92aafd
+      spriteID: ebd6ebcfbdfffd14fabd7075aaa147fa
       internalID: 1431095624269573261
       vertices: []
       indices: 
@@ -503,7 +539,7 @@ TextureImporter:
       name: SpaceshipGround_15
       rect:
         serializedVersion: 2
-        x: 96
+        x: 0
         y: 96
         width: 32
         height: 32
@@ -514,7 +550,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7a98593a6a86512438f4719414750e17
+      spriteID: 5cabcd6c5a2e3c040afe3db0fe4b5256
       internalID: -3031216765809464541
       vertices: []
       indices: 
@@ -524,7 +560,7 @@ TextureImporter:
       name: SpaceshipGround_16
       rect:
         serializedVersion: 2
-        x: 128
+        x: 32
         y: 96
         width: 32
         height: 32
@@ -535,7 +571,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f0444a66e5c2b39479fc5606582a8da2
+      spriteID: 6e533210e6e581f428b9a2f51b343e99
       internalID: 3453971332003884181
       vertices: []
       indices: 
@@ -545,6 +581,69 @@ TextureImporter:
       name: SpaceshipGround_17
       rect:
         serializedVersion: 2
+        x: 64
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 774162cb685c47448a2d77316ab23fc1
+      internalID: 4501574230068624051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceshipGround_18
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e66dca154ba30b14396d405b6e1101f8
+      internalID: 1074813322488305011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceshipGround_19
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0044c8b09f01d7d4081e02ec2ecc1181
+      internalID: 5112815792651900092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceshipGround_20
+      rect:
+        serializedVersion: 2
         x: 160
         y: 96
         width: 32
@@ -556,14 +655,56 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6ed0ed3a07f82264fa91c65ef89202f9
-      internalID: 4501574230068624051
+      spriteID: 0a94b144bc3cc4442a4285d23d0e9766
+      internalID: 5454392105267492775
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpaceshipGround_18
+      name: SpaceshipGround_21
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02b649e623c3f3840aadd39f57ffb4b9
+      internalID: 8277235244474288795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceshipGround_22
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f12fb56f7e76fa84a9c359446d3ae7a7
+      internalID: 2646282646648663355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceshipGround_23
       rect:
         serializedVersion: 2
         x: 0
@@ -577,14 +718,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 47e0a2b32ae3fbe408b217150f5f4f92
-      internalID: 1074813322488305011
+      spriteID: 464890c77acae774db41be2d2f19672d
+      internalID: 5073482131089126740
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpaceshipGround_19
+      name: SpaceshipGround_24
       rect:
         serializedVersion: 2
         x: 32
@@ -598,14 +739,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4ede2f6021a50ce4f85ada3c19fce88a
-      internalID: 5112815792651900092
+      spriteID: 0e80b7f6aa0a8f3408fa96a98e6d5688
+      internalID: -2684751855074560871
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpaceshipGround_20
+      name: SpaceshipGround_25
       rect:
         serializedVersion: 2
         x: 64
@@ -619,14 +760,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 13970ae044229194ab2ca98426c61f8f
-      internalID: 5454392105267492775
+      spriteID: eaa1955378ca4ce43a11fdc1d1d825d8
+      internalID: 366138975187310623
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpaceshipGround_21
+      name: SpaceshipGround_26
       rect:
         serializedVersion: 2
         x: 96
@@ -640,14 +781,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8dc025c96d361c74eb822d059419312c
-      internalID: 8277235244474288795
+      spriteID: ce28f81454fdbd64c95ba7caeb474653
+      internalID: 3438281175920405010
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpaceshipGround_22
+      name: SpaceshipGround_27
       rect:
         serializedVersion: 2
         x: 128
@@ -661,14 +802,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fa04b0e834e13764b87768fa89fda94e
-      internalID: 2646282646648663355
+      spriteID: a132a9b41ceadb840aa9dcf66847630d
+      internalID: 887104793279091427
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpaceshipGround_23
+      name: SpaceshipGround_28
       rect:
         serializedVersion: 2
         x: 160
@@ -682,112 +823,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fde49cf0a3dfc974c946670559bb5827
-      internalID: 5073482131089126740
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpaceshipGround_24
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0f5b01e29f08f2a4c9481af2805070aa
-      internalID: -2684751855074560871
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpaceshipGround_25
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 96da5b0ad60f64745b4c16143cf83035
-      internalID: 366138975187310623
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpaceshipGround_26
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 327d2c9d1a66e4744a7e9860c5f90401
-      internalID: 3438281175920405010
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpaceshipGround_27
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 722327b132067a34fa81deed2c8236fd
-      internalID: 887104793279091427
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpaceshipGround_28
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 29ddad0153b33a946a5ba1779a4a8d1b
+      spriteID: b31838e880c1a0d4f880c2b2fe4a65fd
       internalID: 8436848638850383914
       vertices: []
       indices: 
@@ -797,6 +833,174 @@ TextureImporter:
       name: SpaceshipGround_29
       rect:
         serializedVersion: 2
+        x: 192
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bda4ea761b7f9c4b95ff358a7d790bb
+      internalID: -2451687705943286968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceshipGround_30
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16d9d5d6ce24b814bb25792b7f904550
+      internalID: 588803765086008223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceshipGround_31
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddb1cacce16776146882758ceace319c
+      internalID: 3600075164153538301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceshipGround_32
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6847e1d207be9454480b6624cbc3c209
+      internalID: -4659291042136513145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceshipGround_33
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b69acde944b060347bafeb0c3e1250af
+      internalID: 6258208233918482788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceshipGround_34
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2956f36250ad7e48be22078e0e98423
+      internalID: -3351329822179300233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceshipGround_35
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 081a58d0d3185664986b25deb11b5fe3
+      internalID: -6871057522843961259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceshipGround_36
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 516e77307b29c4044926f4c0a799a494
+      internalID: 7592243994150062022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceshipGround_37
+      rect:
+        serializedVersion: 2
         x: 0
         y: 0
         width: 32
@@ -808,14 +1012,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2032bbf7d28d247479a09b179704a106
-      internalID: -2451687705943286968
+      spriteID: 10ede53f8652aca49957eeb6f26cc0d3
+      internalID: -3361410667635364797
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpaceshipGround_30
+      name: SpaceshipGround_38
       rect:
         serializedVersion: 2
         x: 32
@@ -829,14 +1033,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 169de2175e6084342bf4ddfdf7f14b0b
-      internalID: 588803765086008223
+      spriteID: 3436f471d302cca468c95f18816d480e
+      internalID: -110102246458330158
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpaceshipGround_31
+      name: SpaceshipGround_39
       rect:
         serializedVersion: 2
         x: 64
@@ -850,14 +1054,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8558b217eb557cc449110354a13d351a
-      internalID: 3600075164153538301
+      spriteID: 24d9eccc6e332624c80de75c47a1dd55
+      internalID: 8334938270614904698
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpaceshipGround_32
+      name: SpaceshipGround_40
       rect:
         serializedVersion: 2
         x: 96
@@ -871,8 +1075,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3cf596f9e2d00e5449c3cd71a682257f
-      internalID: -4659291042136513145
+      spriteID: 53af2f8224fc14848b71cacd66dacc41
+      internalID: 7751301039090015741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceshipGround_41
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 727d707a385043b42a2e9d8e9805e27b
+      internalID: -2927766046508026291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceshipGround_42
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55c51c3803e85d547a78d9c2552a410d
+      internalID: 6294782771000907331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceshipGround_43
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6bc28f8c315f9b459ccc39a75ef6fde
+      internalID: 2704528080138427354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceshipGround_44
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fcf97052d05c774c8fc9d47871996b6
+      internalID: -5655337225135265869
       vertices: []
       indices: 
       edges: []
