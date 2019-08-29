@@ -13,11 +13,13 @@ public class PlayerCombat : MonoBehaviour
     public Transform RangedAttackSpawnPos;
     public Vector2 MeleeAttackParameters;
     public LayerMask EnemyLayer;
+    public GameObject Hud;
+    private Animator GunHud;
+    private Animator SwordHud;
 
     public int damage;
 
-    // Update is called once per frame
-    void FixedUpdate()
+    private void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {
@@ -30,15 +32,22 @@ public class PlayerCombat : MonoBehaviour
                 case AttackToDo.nothing: break;
             }
         }
-
        
-    }
-    private void Update()
-    {
         if (Input.GetMouseButtonDown(1))
         {
-            Debug.Log("Switching Weapon");
+            Debug.Log("Switching weapon");
             SwitchingWeapon();
+        }
+    }
+
+    private bool InitializeHud;
+    private void LateUpdate()
+    {
+        Hud = GameObject.FindGameObjectWithTag("HUD");
+        if (!InitializeHud)
+        {
+            GunHud = Hud.transform.GetChild(0).GetComponent<Animator>();
+            SwordHud = Hud.transform.GetChild(1).GetComponent<Animator>();
         }
     }
 
@@ -86,17 +95,29 @@ public class PlayerCombat : MonoBehaviour
         switch (attacktodo)
         {
             case AttackToDo.melee:
-                attacktodo = AttackToDo.ranged;
+                if (Dialog.instance.ContinueButton.activeInHierarchy != true && DialogHeardBefore.instance.sword == true)
+                {
+                    attacktodo = AttackToDo.ranged;
+                    SwordHud.SetBool("Opened", true);
+                }
+                else if (Dialog.instance.ContinueButton.activeInHierarchy != true) attacktodo = AttackToDo.nothing;
+                GunHud.SetBool("Opened", false);
                 break;
 
             case AttackToDo.ranged:
                 attacktodo = AttackToDo.nothing;
+                SwordHud.SetBool("Opened", false);
                 break;
 
             case AttackToDo.nothing:
-                attacktodo = AttackToDo.melee;
+                if (DialogHeardBefore.instance.intro == true && Dialog.instance.ContinueButton.activeInHierarchy != true)
+                {
+                    attacktodo = AttackToDo.melee;
+                    GunHud.SetBool("Opened", true);
+                }
                 break;
         }
+        Debug.Log("Switching weapon");
         
     }
     

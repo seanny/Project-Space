@@ -11,9 +11,9 @@ public class DialogHeardBefore : MonoBehaviour
     }
     [HideInInspector]
     public bool intro = false;
+    //[HideInInspector]
+    public bool sword = false;
     /*[HideInInspector]
-    public bool intro;
-    [HideInInspector]
     public bool intro;
     [HideInInspector]
     public bool intro;

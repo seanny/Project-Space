@@ -63,6 +63,7 @@ public class GiveWeapon : MonoBehaviour
             img.GetComponent<Image>().enabled = true;
         }
         EKey.SetActive(false);
+        Destroy(barrier.gameObject);
         table.GetComponent<SpriteRenderer>().sprite = tablenogun;
         DialogHeardBefore.instance.intro = true;
         Dialog.instance.InitializeDialog(Sentences);
