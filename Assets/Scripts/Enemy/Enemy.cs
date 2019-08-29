@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -172,19 +171,32 @@ public class Enemy : MonoBehaviour
 
         Vector2 convertedPos = new Vector2(movDir.x, rb.velocity.y);
 
-        rb.velocity = convertedPos * movSpeed; 
+        rb.velocity = convertedPos * movSpeed;
 
-        /*if (Vector2.Distance(playerPos, rb.transform.position) > 0.09f)
+        if (Vector2.Distance(playerPos, (Vector2)rb.transform.position) < 5f)
         {
-            rb.MovePosition((Vector2)rb.transform.position + movDir * movSpeed * Time.fixedDeltaTime);
-        }*/
+            if (!state.Equals(EnemyState.Aggro))
+            {
+                state = EnemyState.Aggro;
+                InvokeRepeating("Attack", 0f, 3f);
+            }
+            
+        }
+        else
+        {
+            if (IsInvoking("Attack"))
+            {
+                CancelInvoke("Attack");
+            }
+
+            state = EnemyState.Following;
+        }
     }
 
     #endregion
 
 
     #region Deal Damage
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag.Equals("Player"))
@@ -192,8 +204,16 @@ public class Enemy : MonoBehaviour
 
         }
     }
-
     #endregion
+
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.DrawLine(attackSpawnPos.position, new Vector2(attackSpawnPos.position.x + MeleeAttackParameters.x / 2, attackSpawnPos.position.y));
+        Gizmos.DrawLine(attackSpawnPos.position, new Vector2(attackSpawnPos.position.x - MeleeAttackParameters.x / 2, attackSpawnPos.position.y));
+        Gizmos.DrawLine(attackSpawnPos.position, new Vector2(attackSpawnPos.position.x, MeleeAttackParameters.y / 2 + attackSpawnPos.position.y));
+        Gizmos.DrawLine(attackSpawnPos.position, new Vector2(attackSpawnPos.position.x, -MeleeAttackParameters.y / 2 + attackSpawnPos.position.y));
+    }
 
 }
 
@@ -210,6 +230,7 @@ public enum EnemyType
 public enum EnemyState
 {
     Idle,
+    Following,
     Aggro,
     Dead
 }

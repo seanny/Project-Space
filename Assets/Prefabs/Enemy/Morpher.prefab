@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5252385108000863246
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6238738271127700781}
+  m_Layer: 0
+  m_Name: AttackSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6238738271127700781
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5252385108000863246}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.14, y: 0.38, z: -4.515414}
+  m_LocalScale: {x: 0.6666667, y: 0.6666667, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1434214469174756341}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6242310242510876391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21,8 +51,8 @@ MonoBehaviour:
   changeDirectionTime: 0
   shotSpeed: 0
   playerSpotted: 0
-  attackSpawnPos: {fileID: 0}
-  MeleeAttackParameters: {x: 0, y: 0}
+  attackSpawnPos: {fileID: 6238738271127700781}
+  MeleeAttackParameters: {x: 2.42, y: 2.9}
   mode: 0
 --- !u!1001 &7608628160697687582
 PrefabInstance:
@@ -91,21 +121,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8822583049125912042, guid: 56e78eb3c746a984f9fcdf78caeebccc,
-        type: 3}
-      propertyPath: shotSpeed
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8822583049125912042, guid: 56e78eb3c746a984f9fcdf78caeebccc,
-        type: 3}
-      propertyPath: movSpeed
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8822583049125912042, guid: 56e78eb3c746a984f9fcdf78caeebccc,
-        type: 3}
-      propertyPath: type
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 8822583050826026510, guid: 56e78eb3c746a984f9fcdf78caeebccc,
         type: 3}
       propertyPath: m_Color.r
@@ -121,12 +136,33 @@ PrefabInstance:
       propertyPath: m_Color.g
       value: 0.990566
       objectReference: {fileID: 0}
+    - target: {fileID: 8822583049125912042, guid: 56e78eb3c746a984f9fcdf78caeebccc,
+        type: 3}
+      propertyPath: shotSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8822583049125912042, guid: 56e78eb3c746a984f9fcdf78caeebccc,
+        type: 3}
+      propertyPath: movSpeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8822583049125912042, guid: 56e78eb3c746a984f9fcdf78caeebccc,
+        type: 3}
+      propertyPath: type
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8822583049125912042, guid: 56e78eb3c746a984f9fcdf78caeebccc, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 56e78eb3c746a984f9fcdf78caeebccc, type: 3}
 --- !u!1 &1434214469174756342 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8822583049125912040, guid: 56e78eb3c746a984f9fcdf78caeebccc,
+    type: 3}
+  m_PrefabInstance: {fileID: 7608628160697687582}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1434214469174756341 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8822583049125912043, guid: 56e78eb3c746a984f9fcdf78caeebccc,
     type: 3}
   m_PrefabInstance: {fileID: 7608628160697687582}
   m_PrefabAsset: {fileID: 0}
