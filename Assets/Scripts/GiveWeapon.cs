@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GiveWeapon : MonoBehaviour
 {
@@ -9,8 +10,8 @@ public class GiveWeapon : MonoBehaviour
     public Transform table;
     public float PickupDistance;
     public GameObject EKey;
-    public GameObject Hud;
-    public GameObject HudGunSprite;
+    private GameObject Hud;
+    public Sprite HudSwordSprite;
 
     void Start()
     {
@@ -23,13 +24,17 @@ public class GiveWeapon : MonoBehaviour
             Destroy(this);
         }
 
+       if (GameManager.instance != null) transform.parent = GameManager.instance.transform;
+        Hud = GameObject.FindGameObjectWithTag("HUD");
+
     }
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
-        if (Mathf.Abs(table.position.x - GameManager.instance.player.transform.position.x) < PickupDistance)
+        if (Vector2.Distance(GameManager.instance.player.transform.position, table.transform.position) < PickupDistance)
         {
+            Debug.Log("Distance is short enough");
             EKey.SetActive(true);
             if (Input.GetKeyDown(KeyCode.E)) 
             {
@@ -39,13 +44,25 @@ public class GiveWeapon : MonoBehaviour
         {
             EKey.SetActive(false);
         }
+
     }
 
     void GiveGun()
     {
-        Hud.SetActive(true);
+        //Hud.SetActive(true);
+
+        Debug.Log(Hud.transform.childCount);
+        List<Transform> HudObjects = new List<Transform>
+        {
+        };
+        foreach (Transform img in HudObjects)
+        {
+            img.GetComponent<Image>().enabled = true;
+        }
 
         Destroy(this);
+
+        DialogHeardBefore.instance.intro = true;
 
     }
 }

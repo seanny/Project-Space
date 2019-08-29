@@ -32,7 +32,6 @@ public class GameManager : MonoBehaviour
 
     IEnumerator StartingGame()
     {
-        DialogHeardBefore.instance.intro = true;
         startinggame = true;
         Fader.instance.FadeOut();
         Time.timeScale = 0;
