@@ -10,7 +10,7 @@ public class DialogHeardBefore : MonoBehaviour
         instance = this;
     }
     [HideInInspector]
-    public bool intro;
+    public bool intro = false;
     /*[HideInInspector]
     public bool intro;
     [HideInInspector]
