@@ -159,7 +159,8 @@ MonoBehaviour:
     abuse their power.'
   - 'Hero: What is so wrong with that?'
   - 'Hero: But, today, I must make sure the space here is fully clean.'
-  - 'Hero: I should exit the ship soon.'
+  - 'Hero: I should grab my trusty space gun before I leave. It is great for ranged
+    attacks!'
   player: {fileID: 0}
 --- !u!4 &34533444
 Transform:
@@ -1191,8 +1192,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 51.51
-  m_fontSizeBase: 51.51
+  m_fontSize: 73.49
+  m_fontSizeBase: 73.49
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1836,7 +1837,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textDisplay: {fileID: 1166083605}
   lines: []
-  TimeBetweenLetters: 0.05
+  TimeBetweenLetters: 0.02
   TextBox: {fileID: 2052682649}
   ContinueButton: {fileID: 980122250}
   DialogSystem: {fileID: 392992038}
