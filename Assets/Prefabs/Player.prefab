@@ -156,6 +156,7 @@ MonoBehaviour:
   MoveSpeed: 12
   RunSpeed: 15
   JumpForce: 30
+  jumped: 0
   JustPressedJumpTime: 0.1
   JumpFallMultiplier: 0.5
   AmountOfRaysToCheckIfGrounded: 3
