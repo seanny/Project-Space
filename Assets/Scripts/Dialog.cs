@@ -29,24 +29,6 @@ public class Dialog : MonoBehaviour
         im = TextBox.GetComponent<Image>();
     }
 
-    public IEnumerator TypeSentences()
-    {
-
-        yield return null;
-        Time.timeScale = 0f;
-        DialogSystem.SetActive(true);
-        textDisplay.text = "";
-        im.enabled = true;
-        ContinueButton.gameObject.SetActive(true);
-        inDialog = true;
-        foreach (char letters in lines[sentenceindex].ToCharArray())
-        {
-            textDisplay.text += letters;
-            yield return new WaitForSecondsRealtime(TimeBetweenLetters);
-        }
-
-        inDialog = false;
-    }
     
     public void ContinueDialog()
     {
@@ -76,6 +58,24 @@ public class Dialog : MonoBehaviour
         textDisplay.text = "";
         Time.timeScale = 1f;
     }
+    public IEnumerator TypeSentences()
+    {
+
+        textDisplay.text = "";
+        yield return null;
+        Time.timeScale = 0f;
+        DialogSystem.SetActive(true);
+        im.enabled = true;
+        ContinueButton.gameObject.SetActive(true);
+        inDialog = true;
+        foreach (char letters in lines[sentenceindex].ToCharArray())
+        {
+            textDisplay.text += letters;
+            yield return new WaitForSecondsRealtime(TimeBetweenLetters);
+        }
+
+        inDialog = false;
+    }
 
     public void InitializeDialog(List<string> sentences)
     {
@@ -84,6 +84,7 @@ public class Dialog : MonoBehaviour
         {
             lines.Add(sentences[i]);
         }
+        sentenceindex = 0;
 
         StartCoroutine(TypeSentences());
     }

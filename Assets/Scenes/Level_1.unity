@@ -3671,6 +3671,12 @@ MonoBehaviour:
   PickupDistance: 4.57
   EKey: {fileID: 1203662854}
   HudSwordSprite: {fileID: 21300000, guid: 5b3be3062b73ea44c8afc2aab6b4ff02, type: 3}
+  tablenogun: {fileID: 406830565804566375, guid: ca4c2d98f1565b240a4f4304bb9a417f,
+    type: 3}
+  Sentences:
+  - 'Hero: Ah, my trusty space gun!'
+  - (Right click to switch your arm)
+  - 'Hero: The best around for ranged attacks!'
 --- !u!1 &1178721084
 GameObject:
   m_ObjectHideFlags: 0

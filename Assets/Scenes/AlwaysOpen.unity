@@ -159,8 +159,7 @@ MonoBehaviour:
     abuse their power.'
   - 'Hero: What is so wrong with that?'
   - 'Hero: But, today, I must make sure the space here is fully clean.'
-  - 'Hero: I should grab my trusty space gun before I leave. It is great for ranged
-    attacks!'
+  - 'Hero: I should grab my trusty space gun before I leave.'
   player: {fileID: 0}
 --- !u!4 &34533444
 Transform:
@@ -1425,7 +1424,7 @@ GameObject:
   - component: {fileID: 1222628212}
   m_Layer: 5
   m_Name: Hud
-  m_TagString: Untagged
+  m_TagString: HUD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

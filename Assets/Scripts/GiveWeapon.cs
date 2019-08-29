@@ -12,6 +12,8 @@ public class GiveWeapon : MonoBehaviour
     public GameObject EKey;
     private GameObject Hud;
     public Sprite HudSwordSprite;
+    public Sprite tablenogun;
+    public List<string> Sentences;
 
     void Start()
     {
@@ -50,19 +52,22 @@ public class GiveWeapon : MonoBehaviour
     void GiveGun()
     {
         //Hud.SetActive(true);
-
-        Debug.Log(Hud.transform.childCount);
+        
         List<Transform> HudObjects = new List<Transform>
         {
+            Hud.transform.GetChild(0),
+            Hud.transform.GetChild(1)
         };
         foreach (Transform img in HudObjects)
         {
             img.GetComponent<Image>().enabled = true;
         }
-
+        EKey.SetActive(false);
+        table.GetComponent<SpriteRenderer>().sprite = tablenogun;
+        DialogHeardBefore.instance.intro = true;
+        Dialog.instance.InitializeDialog(Sentences);
         Destroy(this);
 
-        DialogHeardBefore.instance.intro = true;
 
     }
 }
