@@ -87,7 +87,7 @@ public class Enemy : MonoBehaviour
     //Move The Enemy
     void Move(float speed)
     {
-        rb.velocity = new Vector2(speed, rb.velocity.y) ;
+        rb.velocity = new Vector2(-speed, rb.velocity.y) ;
     }
 
     //Change Direction

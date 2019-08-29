@@ -68,6 +68,7 @@ public class GiveWeapon : MonoBehaviour
         DialogHeardBefore.instance.intro = true;
         Dialog.instance.InitializeDialog(Sentences);
         transform.parent = GameObject.FindGameObjectWithTag("Door").transform;
+        transform.parent = null;
         Destroy(this);
 
 
