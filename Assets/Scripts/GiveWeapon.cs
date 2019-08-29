@@ -67,6 +67,7 @@ public class GiveWeapon : MonoBehaviour
         table.GetComponent<SpriteRenderer>().sprite = tablenogun;
         DialogHeardBefore.instance.intro = true;
         Dialog.instance.InitializeDialog(Sentences);
+        transform.parent = GameObject.FindGameObjectWithTag("Door").transform;
         Destroy(this);
 
 
