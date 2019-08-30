@@ -35,7 +35,7 @@ public class PlayerCombat : MonoBehaviour
        
         if (Input.GetMouseButtonDown(1))
         {
-            Debug.Log("Switching weapon");
+            //Debug.Log("Switching weapon");
             SwitchingWeapon();
         }
     }
@@ -117,7 +117,7 @@ public class PlayerCombat : MonoBehaviour
                 }
                 break;
         }
-        Debug.Log("Switching weapon");
+        //Debug.Log("Switching weapon");
         
     }
     

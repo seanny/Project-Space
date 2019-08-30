@@ -52,7 +52,7 @@ public class Dialog : MonoBehaviour
 
     void EndDialog()
     {
-        Debug.Log("Ending Dialog");
+        //Debug.Log("Ending Dialog");
         im.enabled = false;
         ContinueButton.gameObject.SetActive(false);
         textDisplay.text = "";

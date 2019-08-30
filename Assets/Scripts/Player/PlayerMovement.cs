@@ -121,7 +121,7 @@ public class PlayerMovement : MonoBehaviour
             if (groundedtime > 0)
             {
                 PressedJumpTime = JustPressedJumpTime;
-                rb.velocity = Vector2.up * JumpForce;
+                rb.velocity = new Vector2(rb.velocity.x, JumpForce);
             }
         }
         #endregion

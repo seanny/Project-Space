@@ -34,7 +34,7 @@ public class PlayerSpriteManagement : MonoBehaviour
             jumped = true;
             anim.Play("Jump");
             anim.SetBool("InAir", true);
-            Debug.Log("Jumped");
+            //Debug.Log("Jumped");
         }
         else if (m_PlayerMovement.IsGrounded())
         {

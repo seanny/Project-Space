@@ -8,6 +8,7 @@ public class DeathZone : MonoBehaviour
     {
         if (collision.gameObject.tag.Equals("Player"))
         {
+            collision.GetComponent<PlayerHealth>().TakeDamage(1);
             GameManager.instance.TeleportToCheckPoint();
         }
     }

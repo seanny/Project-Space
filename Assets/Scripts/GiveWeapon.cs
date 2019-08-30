@@ -36,7 +36,7 @@ public class GiveWeapon : MonoBehaviour
     {
         if (Vector2.Distance(GameManager.instance.player.transform.position, table.transform.position) < PickupDistance)
         {
-            Debug.Log("Distance is short enough");
+            //Debug.Log("Distance is short enough");
             EKey.SetActive(true);
             if (Input.GetKeyDown(KeyCode.E)) 
             {
