@@ -1,19 +1,31 @@
 fileFormatVersion: 2
-guid: 55cb17ef4e300df4bb00a25e3b9ca427
+guid: c0ffe46c489057141b98146371a0a5df
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7772964097427978997
-    second: Gunswing-sheet_0
+      213: 7725733949577912035
+    second: Smear-Sheet_0
   - first:
-      213: 971002272677559374
-    second: Gunswing-sheet_1
+      213: -1547513012035048311
+    second: Smear-Sheet_1
   - first:
-      213: 6189238447507951435
-    second: Gunswing-sheet_2
+      213: -2027119170325894485
+    second: Smear-Sheet_2
   - first:
-      213: -7432493761468314897
-    second: Gunswing-sheet_3
+      213: -451621162226699932
+    second: Smear-Sheet_3
+  - first:
+      213: 7698610690662985768
+    second: Smear-Sheet_4
+  - first:
+      213: -3052015993354885592
+    second: Smear-Sheet_5
+  - first:
+      213: 8837350636472390799
+    second: Smear-Sheet_6
+  - first:
+      213: 8129375423694992298
+    second: Smear-Sheet_7
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -122,7 +134,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Gunswing-sheet_0
+      name: Smear-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -136,14 +148,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6fb237250230a454fa96fba07c097cc9
-      internalID: 7772964097427978997
+      spriteID: 2301d8a624a6ee74daef732b35c8ee7a
+      internalID: 7725733949577912035
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Gunswing-sheet_1
+      name: Smear-Sheet_1
       rect:
         serializedVersion: 2
         x: 32
@@ -157,14 +169,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0635b6a8fd1c57f46accbe09796883e2
-      internalID: 971002272677559374
+      spriteID: 1e47c7f029c3c9f4f96fac2e89655493
+      internalID: -1547513012035048311
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Gunswing-sheet_2
+      name: Smear-Sheet_2
       rect:
         serializedVersion: 2
         x: 64
@@ -178,14 +190,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ed4256a4b9a30324d9d27c756fb5722d
-      internalID: 6189238447507951435
+      spriteID: deb80d13421205a4591f2274fdf824db
+      internalID: -2027119170325894485
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Gunswing-sheet_3
+      name: Smear-Sheet_3
       rect:
         serializedVersion: 2
         x: 96
@@ -199,8 +211,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c0f491b66b5a6f9499afad5c03b1b41e
-      internalID: -7432493761468314897
+      spriteID: 2432741ef3d981d4aab6b58ec4506d11
+      internalID: -451621162226699932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Smear-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10f244889171e0146a0179c2d63d7f17
+      internalID: 7698610690662985768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Smear-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec009ae5a6bbd86439c9945cdd533a31
+      internalID: -3052015993354885592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Smear-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfca8ea604ab88046b34a34b4e6b4a2c
+      internalID: 8837350636472390799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Smear-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6d4ea6ef3812534e8835316fb323f1e
+      internalID: 8129375423694992298
       vertices: []
       indices: 
       edges: []

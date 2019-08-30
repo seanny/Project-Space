@@ -13,6 +13,8 @@ public class PlayerSpriteManagement : MonoBehaviour
     Rigidbody2D rb;
     bool jumped = false;
 
+    public Animator smear;
+
     private void OnEnable()
     {
 
@@ -42,6 +44,12 @@ public class PlayerSpriteManagement : MonoBehaviour
             anim.SetBool("InAir", false);
             anim.ResetTrigger("Jump");
 
+        }
+
+        if (Input.GetMouseButtonDown(0) && m_PlayerCombat.attacktodo.Equals(AttackToDo.melee))
+        {
+            anim.SetTrigger("Attack");
+            smear.SetTrigger("Attack");
         }
             
 
