@@ -150,6 +150,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MainMenuParent: {fileID: 493573499}
+  spawnPos: {x: 0, y: 0}
   startdialog:
   - 'Hero: Another BEAUTIFUL day aboard my spaceship.'
   - 'Hero: I love my space station.'
@@ -2539,6 +2540,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   intro: 0
   sword: 0
+  asteroid: 0
 --- !u!1 &1726713100
 GameObject:
   m_ObjectHideFlags: 0

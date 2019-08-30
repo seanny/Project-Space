@@ -16,16 +16,31 @@ public class DialogHeardBefore : MonoBehaviour
     [HideInInspector]
     public bool asteroid;
 
-    public bool GetBoolValue(string boolname)
+    public bool GetBoolValue(string boolname, bool overRide)
     {
         switch (boolname)
         {
             case "intro":
-                return intro;
+                if (!overRide) return intro;
+                else
+                {
+                    intro = true;
+                    return intro;
+                }
             case "sword":
-                return sword;
+                if (!overRide) return sword;
+                else
+                {
+                    sword = true;
+                    return sword;
+                }
             case "asteroid":
-                return asteroid;
+                if (!overRide) return asteroid;
+                else
+                {
+                    asteroid = true;
+                    return asteroid;
+                }
             default:
                 return false;
         }

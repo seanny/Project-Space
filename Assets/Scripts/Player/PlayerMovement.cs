@@ -75,7 +75,10 @@ public class PlayerMovement : MonoBehaviour
         return false;
     }
 
-    private void FixedUpdate()
+    private float groundedtime;
+    private readonly float maxgroundedtime = 0.1f;
+
+    private void Update()
     {
         #region HorizontalInput
         HorizontalInput = Input.GetAxisRaw("Horizontal");
@@ -98,7 +101,8 @@ public class PlayerMovement : MonoBehaviour
 
         }
         if (PressedJumpTime >= 0) { PressedJumpTime -= Time.fixedDeltaTime; }
-        
+        if (groundedtime >= 0) { groundedtime -= Time.fixedDeltaTime; }
+
         if (rb.velocity.y > 0)
         {
             if (!Input.GetKey(KeyCode.Space))
@@ -107,9 +111,14 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-        if (PressedJumpTime >= 0)
+        if (IsGrounded())
         {
-            if (IsGrounded())
+            groundedtime = maxgroundedtime;
+        }
+
+        if (PressedJumpTime > 0)
+        {
+            if (groundedtime > 0)
             {
                 PressedJumpTime = JustPressedJumpTime;
                 rb.velocity = Vector2.up * JumpForce;
