@@ -3895,7 +3895,7 @@ PrefabInstance:
     - target: {fileID: 8806338645910050416, guid: b3d56e2569c068944b3d716a6a4fc927,
         type: 3}
       propertyPath: SceneToUnloadBuildIndex
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8806338645910050419, guid: b3d56e2569c068944b3d716a6a4fc927, type: 3}
