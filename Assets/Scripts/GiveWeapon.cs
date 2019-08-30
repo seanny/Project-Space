@@ -52,12 +52,14 @@ public class GiveWeapon : MonoBehaviour
     void GiveGun()
     {
         //Hud.SetActive(true);
-        
-        List<Transform> HudObjects = new List<Transform>
+
+        List<Transform> HudObjects = new List<Transform>();
+
+        for (int i = 0; i < Hud.transform.childCount; i++)
         {
-            Hud.transform.GetChild(0),
-            Hud.transform.GetChild(1)
-        };
+            Hud.transform.GetChild(i);
+
+        }
         foreach (Transform img in HudObjects)
         {
             img.GetComponent<Image>().enabled = true;
