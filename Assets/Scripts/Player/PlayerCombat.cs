@@ -59,6 +59,7 @@ public class PlayerCombat : MonoBehaviour
         {
             Debug.Log("Hitting enemy");
             enemy.GetComponent<Enemy>().ReceiveDamage(damage);
+            enemy.GetComponent<Enemy>().JumpOnHit();
         }
 
         Debug.Log("Swinging");

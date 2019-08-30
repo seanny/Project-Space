@@ -66,7 +66,7 @@ public class Enemy : MonoBehaviour
 
     public virtual void ReceiveDamage(int dmgAmount)
     {
-        Debug.Log(gameObject.name + " received Damage!");
+        StartCoroutine(ChangeColor());
         health -= dmgAmount;
 
         if (health <= 0)
@@ -75,11 +75,24 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    IEnumerator ChangeColor()
+    {
+        sprite.color = Color.red;
+        yield return new WaitForSeconds(.2f);
+        sprite.color = Color.white;
+    }
+
     IEnumerator Death()
     {
         type = EnemyType.Dead;
         rb.velocity = Vector2.zero;
-        yield return new WaitForSeconds(2f);
+        rb.isKinematic = true;
+        Collider2D[] colliders = GetComponents<Collider2D>();
+        foreach (Collider2D col in colliders)
+        {
+            col.enabled = false;
+        }
+        yield return new WaitForSeconds(1f);
         Destroy(gameObject);
     }
 
@@ -195,13 +208,12 @@ public class Enemy : MonoBehaviour
 
     #endregion
 
-
     #region Deal Damage
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag.Equals("Player"))
         {
-
+            collision.gameObject.GetComponent<PlayerHealth>().TakeDamage(1);
         }
     }
     #endregion
@@ -214,6 +226,26 @@ public class Enemy : MonoBehaviour
         Gizmos.DrawLine(attackSpawnPos.position, new Vector2(attackSpawnPos.position.x, MeleeAttackParameters.y / 2 + attackSpawnPos.position.y));
         Gizmos.DrawLine(attackSpawnPos.position, new Vector2(attackSpawnPos.position.x, -MeleeAttackParameters.y / 2 + attackSpawnPos.position.y));
     }
+
+    #region GameFeel
+
+    bool canJump = true;
+    public void JumpOnHit()
+    {
+        if (canJump)
+        {
+            rb.AddForce(new Vector2(0, 1) * 4f, ForceMode2D.Impulse);
+            canJump = false;
+            StartCoroutine(EnableJump());
+        }
+    }
+
+    IEnumerator EnableJump()
+    {
+        yield return new WaitForSeconds(2f);
+        canJump = true;
+    }
+    #endregion
 
 }
 
