@@ -43,7 +43,7 @@ public class Door : MonoBehaviour
                 while (!load.isDone) { yield return new WaitForEndOfFrame(); }
             }
 
-            if (SceneToLoadBuildIndex != 999)
+            if (SceneToUnloadBuildIndex != 999)
             {
                 AsyncOperation unload = SceneManager.UnloadSceneAsync(SceneToUnloadBuildIndex, UnloadSceneOptions.None);
                 while (!unload.isDone) { yield return new WaitForEndOfFrame(); }
@@ -78,14 +78,14 @@ public class Door : MonoBehaviour
                 while (!load.isDone) { yield return null; }
             }
 
-            if (SceneToLoadBuildIndex != 999)
+            if (SceneToUnloadBuildIndex != 999)
             {
                 AsyncOperation unload = SceneManager.UnloadSceneAsync(SceneToUnloadBuildIndex, UnloadSceneOptions.None);
                 while (!unload.isDone) { yield return null; }
             }
         }
 
-        Destroy(gameObject);
+        //Destroy(gameObject);
 
     }
 
