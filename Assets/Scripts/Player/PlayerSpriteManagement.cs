@@ -11,6 +11,7 @@ public class PlayerSpriteManagement : MonoBehaviour
     private PlayerMovement m_PlayerMovement;
     Animator anim;
     Rigidbody2D rb;
+    bool jumped = false;
 
     private void OnEnable()
     {
@@ -25,19 +26,22 @@ public class PlayerSpriteManagement : MonoBehaviour
 
     private void Update()
     {
-        if (rb.velocity.x != 0) { anim.SetBool("Walking", true); }
+        if (rb.velocity.x != 0 && Input.GetAxisRaw("Horizontal") != 0) { anim.SetBool("Walking", true); }
         else { anim.SetBool("Walking", false); }
 
-        if (!m_PlayerMovement.IsGrounded())
+        if (!m_PlayerMovement.IsGrounded() && Input.GetKey(KeyCode.Space) && !jumped)
         {
+            jumped = true;
             anim.Play("Jump");
             anim.SetBool("InAir", true);
             Debug.Log("Jumped");
         }
-        else
+        else if (m_PlayerMovement.IsGrounded())
         {
+            jumped = false;
             anim.SetBool("InAir", false);
             anim.ResetTrigger("Jump");
+
         }
             
 

@@ -96,9 +96,9 @@ public class Enemy : MonoBehaviour
         movSpeed = movSpeed * -1;
 
         if (movSpeed > 0)
-            sprite.flipX = true;
-        else
             sprite.flipX = false;
+        else
+            sprite.flipX = true;
     }
     #endregion
 
