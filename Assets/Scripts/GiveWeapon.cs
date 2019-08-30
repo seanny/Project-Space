@@ -57,7 +57,7 @@ public class GiveWeapon : MonoBehaviour
 
         for (int i = 0; i < Hud.transform.childCount; i++)
         {
-            Hud.transform.GetChild(i);
+            HudObjects.Add(Hud.transform.GetChild(i));
 
         }
         foreach (Transform img in HudObjects)
