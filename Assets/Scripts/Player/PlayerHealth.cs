@@ -8,12 +8,12 @@ public class PlayerHealth : MonoBehaviour
     public int HealthCount;
     private int MaxHealth;
     private SpriteRenderer spr;
-    public GameObject HealthHud;
+    public List<GameObject> Hearts = new List<GameObject>();
 
     private void Awake()
     {
         pc = GetComponent<PlayerCombat>();
-        spr = GetComponent<SpriteRenderer>();
+        spr = GetComponentInChildren<SpriteRenderer>();
         MaxHealth = HealthCount;
     }
 
@@ -44,13 +44,13 @@ public class PlayerHealth : MonoBehaviour
 
     void UpdateHearts()
     {
-        if (HealthHud == null) HealthHud = GameObject.FindGameObjectWithTag("HeathHud");
-        List<GameObject> Hearts = new List<GameObject>();
-        for (int i = 0; i < HealthHud.transform.childCount; i++)
-        {
-            Hearts.Add(HealthHud.transform.GetChild(i).gameObject);
+        GameObject[] hearts = GameObject.FindGameObjectsWithTag("Heart");
 
+        for (int i = 0; i < hearts.Length; i++)
+        {
+            Hearts.Add(hearts[i]);
         }
+
         switch (HealthCount)
         {
             case 0:

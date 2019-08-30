@@ -50,33 +50,39 @@ public class Door : MonoBehaviour
             }
 
 
-            object[] obj = FindObjectsOfType(typeof(GameObject));
+            /*object[] obj = FindObjectsOfType(typeof(GameObject));
             foreach (object o in obj)
             {
                 GameObject g = (GameObject)o;
 
-                if (g.GetComponent<Door>() != null)
-                {
-                    g.GetComponent<Door>();
+               
+                    g?.GetComponent<Door>();
 
                     if (g.GetComponent<Door>().PreviousLevel.Equals(CurrentLevel))
                     {
                         GameManager.instance.player.transform.position = g.transform.position;
                     }
-                }
+                
                 
             }
-
+            */
             Time.timeScale = 1f;
             Fader.instance.FadeIn();
             yield return new WaitForSecondsRealtime(1f);
         } else
         {
 
-            AsyncOperation load = SceneManager.LoadSceneAsync(SceneToLoadBuildIndex, LoadSceneMode.Additive);
-            while (!load.isDone) { yield return null; }
-            AsyncOperation unload = SceneManager.UnloadSceneAsync(SceneToUnloadBuildIndex, UnloadSceneOptions.None);
-            while (!unload.isDone) { yield return null; }
+            if (SceneToLoadBuildIndex != 999)
+            {
+                AsyncOperation load = SceneManager.LoadSceneAsync(SceneToLoadBuildIndex, LoadSceneMode.Additive);
+                while (!load.isDone) { yield return null; }
+            }
+
+            if (SceneToLoadBuildIndex != 999)
+            {
+                AsyncOperation unload = SceneManager.UnloadSceneAsync(SceneToUnloadBuildIndex, UnloadSceneOptions.None);
+                while (!unload.isDone) { yield return null; }
+            }
         }
 
         Destroy(gameObject);
