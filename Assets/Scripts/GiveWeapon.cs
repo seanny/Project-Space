@@ -30,8 +30,6 @@ public class GiveWeapon : MonoBehaviour
         Hud = GameObject.FindGameObjectWithTag("HUD");
 
     }
-
-    // Update is called once per frame
     void LateUpdate()
     {
         if (Vector2.Distance(GameManager.instance.player.transform.position, table.transform.position) < PickupDistance)
