@@ -812,6 +812,115 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3d56e2569c068944b3d716a6a4fc927, type: 3}
+--- !u!1001 &268697127
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1329011338798249058, guid: 701d902845d803046a797321d0833d4e,
+        type: 3}
+      propertyPath: m_Name
+      value: DialogGiver
+      objectReference: {fileID: 0}
+    - target: {fileID: 8213562026715974256, guid: 701d902845d803046a797321d0833d4e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 25.466663
+      objectReference: {fileID: 0}
+    - target: {fileID: 8213562026715974256, guid: 701d902845d803046a797321d0833d4e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 8213562026715974256, guid: 701d902845d803046a797321d0833d4e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8213562026715974256, guid: 701d902845d803046a797321d0833d4e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8213562026715974256, guid: 701d902845d803046a797321d0833d4e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8213562026715974256, guid: 701d902845d803046a797321d0833d4e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8213562026715974256, guid: 701d902845d803046a797321d0833d4e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8213562026715974256, guid: 701d902845d803046a797321d0833d4e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 8213562026715974256, guid: 701d902845d803046a797321d0833d4e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8213562026715974256, guid: 701d902845d803046a797321d0833d4e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8213562026715974256, guid: 701d902845d803046a797321d0833d4e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8213562026715974256, guid: 701d902845d803046a797321d0833d4e,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693321341874344070, guid: 701d902845d803046a797321d0833d4e,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 23.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 8447009081719657052, guid: 701d902845d803046a797321d0833d4e,
+        type: 3}
+      propertyPath: sentences.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8447009081719657052, guid: 701d902845d803046a797321d0833d4e,
+        type: 3}
+      propertyPath: referencevariable
+      value: asteroid
+      objectReference: {fileID: 0}
+    - target: {fileID: 8447009081719657052, guid: 701d902845d803046a797321d0833d4e,
+        type: 3}
+      propertyPath: sentences.Array.data[0]
+      value: 'Hero: Woah, it looks like someone has spilled their space truck of asteroids!'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8447009081719657052, guid: 701d902845d803046a797321d0833d4e,
+        type: 3}
+      propertyPath: sentences.Array.data[1]
+      value: 'Hero: Dirty spacemen, always leaving their junk everywhere!'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8447009081719657052, guid: 701d902845d803046a797321d0833d4e,
+        type: 3}
+      propertyPath: sentences.Array.data[2]
+      value: 'Hero: I need to go find them and show them justice!'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8447009081719657052, guid: 701d902845d803046a797321d0833d4e,
+        type: 3}
+      propertyPath: sentences.Array.data[3]
+      value: (Press space to jump)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 701d902845d803046a797321d0833d4e, type: 3}
 --- !u!1 &290628875
 GameObject:
   m_ObjectHideFlags: 0
