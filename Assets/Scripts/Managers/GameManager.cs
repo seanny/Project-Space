@@ -9,6 +9,9 @@ public class GameManager : MonoBehaviour
     public GameObject MainMenuParent;
 
     public static GameManager instance;
+
+    public Vector2 spawnPos;
+
     private void Awake()
     {
         
@@ -48,6 +51,12 @@ public class GameManager : MonoBehaviour
         player = FindObjectOfType<PlayerMovement>().gameObject;
         yield return new WaitForSecondsRealtime(1f);
         startinggame = false;
+    }
+
+    public void TeleportToCheckPoint()
+    {
+        player.transform.position = spawnPos;
+
     }
 
     public void QuitGame()
