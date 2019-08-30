@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour
 
     public Vector2 spawnPos;
 
+    public List<int> ActiveScenes = new List<int>();
+
     private void Awake()
     {
         

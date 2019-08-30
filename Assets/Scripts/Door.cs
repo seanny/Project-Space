@@ -19,6 +19,7 @@ public class Door : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
+
             StartCoroutine(SceneTransitions());            
         }
 
@@ -71,17 +72,19 @@ public class Door : MonoBehaviour
             yield return new WaitForSecondsRealtime(1f);
         } else
         {
-
-            if (SceneToLoadBuildIndex != 999)
+            if (!GameManager.instance.ActiveScenes.Contains(SceneToLoadBuildIndex))
             {
-                AsyncOperation load = SceneManager.LoadSceneAsync(SceneToLoadBuildIndex, LoadSceneMode.Additive);
-                while (!load.isDone) { yield return null; }
-            }
+                if (SceneToLoadBuildIndex != 999)
+                {
+                    AsyncOperation load = SceneManager.LoadSceneAsync(SceneToLoadBuildIndex, LoadSceneMode.Additive);
+                    while (!load.isDone) { yield return null; }
+                }
 
-            if (SceneToUnloadBuildIndex != 999)
-            {
-                AsyncOperation unload = SceneManager.UnloadSceneAsync(SceneToUnloadBuildIndex, UnloadSceneOptions.None);
-                while (!unload.isDone) { yield return null; }
+                if (SceneToUnloadBuildIndex != 999)
+                {
+                    AsyncOperation unload = SceneManager.UnloadSceneAsync(SceneToUnloadBuildIndex, UnloadSceneOptions.None);
+                    while (!unload.isDone) { yield return null; }
+                }
             }
         }
 
