@@ -70,5 +70,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 195f2445beacc5140a52a4e5a29676d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sentences: []
+  sentences:
+  - PeePee
+  - PooPoo
   referencevariable: 
