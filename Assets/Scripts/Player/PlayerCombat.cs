@@ -37,7 +37,7 @@ public class PlayerCombat : MonoBehaviour
         starttimebetweenattacks = timebetweenattacks;
     }
 
-    private void Update()
+    private void LateUpdate()
     {
         timebetweenattacks -= Time.deltaTime;
         timeBetweenSword -= Time.deltaTime;
