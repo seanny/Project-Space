@@ -2,10 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Projectile : MonoBehaviour
+public class SwordProjectile : MonoBehaviour
 {
+    [Header("Damage")]
+    public int damage;
 
-    [SerializeField] float lifeSpan;
+    [Header("LifeSpam")]
+    public float lifeSpan;
 
     private void Start()
     {
@@ -14,16 +17,15 @@ public class Projectile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag.Equals("Player"))
+        if (collision.gameObject.GetComponent<Enemy>() != null)
         {
-            PlayerHealth player = collision.gameObject.GetComponent<PlayerHealth>();
+            Enemy enemy = collision.gameObject.GetComponent<Enemy>();
 
-            player.TakeDamage(1);
+            enemy.ReceiveDamage(damage);
 
             gameObject.SetActive(false);
         }
     }
-
     IEnumerator Deactivate()
     {
         yield return new WaitForSeconds(lifeSpan);
