@@ -45,7 +45,7 @@ public class Enemy : MonoBehaviour
 
         maxHealth = health;
 
-        startcolor = GetComponent<SpriteRenderer>().color;
+        startcolor = GetComponentInChildren<SpriteRenderer>().color;
 
         if (type.Equals(EnemyType.Patrol))
         {
