@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityEngine.EventSystems;
 
-public class MenuButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler
+public class MenuButton : MonoBehaviour, IPointerEnterHandler, IPointerDownHandler
 {
     public void OnPointerEnter(PointerEventData eventData)
     {
