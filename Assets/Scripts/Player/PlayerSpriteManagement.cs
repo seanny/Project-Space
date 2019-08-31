@@ -99,8 +99,8 @@ public class PlayerSpriteManagement : MonoBehaviour
                 currentIdleSprite = 0;
                 break;
         }
-
-        anim.SetFloat("Idle", currentIdleSprite);
+        if (anim != null) { anim.SetFloat("Idle", currentIdleSprite); }
+        else { InitRenderer();}
     }
 
     private void SetIdleSprite()
