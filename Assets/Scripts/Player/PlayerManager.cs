@@ -8,23 +8,13 @@ public class PlayerManager : MonoBehaviour
 {
     #region Singleton
 
-    public static PlayerManager Instance { get; private set; }
+    public static PlayerManager Instance;
     
     private void Awake()
     {
-        if (!Instance)
-        {
             Instance = this;
         }
-    }
 
-    private void OnDestroy()
-    {
-        if (Instance == this)
-        {
-            Instance = null;
-        }
-    }
 
     #endregion
     
