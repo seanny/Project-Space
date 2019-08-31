@@ -78,6 +78,6 @@ public class PlayerHealth : MonoBehaviour
 
     void Die()
     {
-
+        AudioManager.instance.PlaySound("Death");
     }
 }
