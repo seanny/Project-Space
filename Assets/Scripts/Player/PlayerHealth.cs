@@ -25,6 +25,7 @@ public class PlayerHealth : MonoBehaviour
         if (HealthCount <= 0) Die();
         else // Damaged but not dead
         {
+            AudioManager.instance.PlaySound("Damaged");
             StartCoroutine(DamageBlink());
         }
     }
