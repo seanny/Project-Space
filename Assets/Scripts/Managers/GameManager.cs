@@ -36,10 +36,10 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void Update()
+    /*private void Update()
     {
-        RenderSettings.skybox.SetFloat("_Rotation", Time.time * 2f);
-    }
+        //RenderSettings.skybox.SetFloat("_Rotation", Time.time * 2f);
+    }*/
 
     IEnumerator StartingGame()
     {

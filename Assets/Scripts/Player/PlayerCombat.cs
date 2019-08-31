@@ -87,6 +87,7 @@ public class PlayerCombat : MonoBehaviour
             shotSpeed = -Mathf.Abs(shotSpeed);
         else
             shotSpeed = Mathf.Abs(shotSpeed);
+
         Hud = GameObject.FindGameObjectWithTag("HUD");
         if (!InitializeHud)
         {
