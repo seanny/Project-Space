@@ -33,7 +33,10 @@ public class PlayerSpriteManagement : MonoBehaviour
 
     void AttackAnim()
     {
-        SwingSprite.SetTrigger("Swing");
+        if (m_PlayerCombat.attacktodo.Equals(AttackToDo.melee))
+        {
+            SwingSprite.SetTrigger("Swing");
+        }
         anim.SetTrigger("Attack");
     }
 

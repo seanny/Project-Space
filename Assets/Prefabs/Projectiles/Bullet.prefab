@@ -117,6 +117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifeSpan: 6
+  tag: Player
 --- !u!58 &9129937965928542163
 CircleCollider2D:
   m_ObjectHideFlags: 0

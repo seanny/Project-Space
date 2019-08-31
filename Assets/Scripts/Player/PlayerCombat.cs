@@ -24,6 +24,12 @@ public class PlayerCombat : MonoBehaviour
     public float timebetweenattacks = 0.4f;
     private float starttimebetweenattacks = 0.4f;
 
+    public float timeBetweenSword = 1.2f;
+    private float startTimebetweenSword= 1.2f;
+
+    [Header("Projectile")]
+    public float shotSpeed;
+
     public int damage;
 
     private void Start()
@@ -34,6 +40,7 @@ public class PlayerCombat : MonoBehaviour
     private void Update()
     {
         timebetweenattacks -= Time.deltaTime;
+        timeBetweenSword -= Time.deltaTime;
 
         if (Input.GetMouseButton(0))
         {
@@ -50,7 +57,16 @@ public class PlayerCombat : MonoBehaviour
                         break;
                     }
 
-                case AttackToDo.ranged: RangedAttack(); break;
+                case AttackToDo.ranged:
+
+                    if (timeBetweenSword < 0)
+                    {
+                        RangedAttack();
+                        PlayerAttacking?.Invoke();
+                        timeBetweenSword = startTimebetweenSword;
+                    }
+                    
+                    break;
 
                 case AttackToDo.nothing: break;
             }
@@ -61,6 +77,11 @@ public class PlayerCombat : MonoBehaviour
             //Debug.Log("Switching weapon");
             SwitchingWeapon();
         }
+
+        if (!GameManager.instance.player.GetComponent<PlayerMovement>().facingRight)
+            shotSpeed = -Mathf.Abs(shotSpeed);
+        else
+            shotSpeed = Mathf.Abs(shotSpeed);
     }
 
     private bool InitializeHud;
@@ -90,7 +111,11 @@ public class PlayerCombat : MonoBehaviour
 
     void RangedAttack()
     {
-        Pooler.instance.SpawnFromPool("PlayerBullet", RangedAttackSpawnPos.position, Quaternion.identity);
+        GameObject obj = Pooler.instance.SpawnFromPool("PlayerBullet", RangedAttackSpawnPos.position, Quaternion.identity);
+
+        Rigidbody2D projectileRB = obj.GetComponent<Rigidbody2D>();
+
+        projectileRB.velocity = Vector2.right * shotSpeed;
     }
 
     private void OnDrawGizmosSelected()

@@ -5,7 +5,8 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
 
-    [SerializeField] float lifeSpan; 
+    [SerializeField] float lifeSpan;
+    [SerializeField] string tag;
 
     private void Start()
     {
@@ -14,7 +15,7 @@ public class Projectile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag.Equals("Player"))
+        if (collision.gameObject.tag.Equals(tag))
         {
             gameObject.SetActive(false);
         }

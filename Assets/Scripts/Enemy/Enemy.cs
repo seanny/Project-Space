@@ -215,6 +215,11 @@ public class Enemy : MonoBehaviour
         {
             collision.gameObject.GetComponent<PlayerHealth>().TakeDamage(1);
         }
+
+        if (collision.gameObject.tag.Equals("Projectile"))
+        {
+            ReceiveDamage(2);
+        }
     }
     #endregion
 
