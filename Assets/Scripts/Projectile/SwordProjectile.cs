@@ -22,6 +22,7 @@ public class SwordProjectile : MonoBehaviour
             Enemy enemy = collision.gameObject.GetComponent<Enemy>();
 
             enemy.ReceiveDamage(damage);
+            AudioManager.instance.PlaySound("EnemyDamaged");
 
             gameObject.SetActive(false);
         }

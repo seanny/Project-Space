@@ -262,7 +262,7 @@ MonoBehaviour:
   Hud: {fileID: 0}
   timebetweenattacks: 0.4
   timeBetweenSword: 1.2
-  shotSpeed: 15
+  shotSpeed: 25
   damage: 2
 --- !u!114 &6307442650575433660
 MonoBehaviour:

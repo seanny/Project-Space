@@ -100,18 +100,22 @@ public class PlayerCombat : MonoBehaviour
     {
         Collider2D[] hitEnemies = Physics2D.OverlapBoxAll(MeleeAttackSpawnPos.position, MeleeAttackParameters, 0, EnemyLayer );
 
+        AudioManager.instance.PlaySound("Swing");
         foreach (Collider2D enemy in hitEnemies)
         {
-            Debug.Log("Hitting enemy");
+            //Debug.Log("Hitting enemy");
             enemy.GetComponent<Enemy>().ReceiveDamage(damage);
             enemy.GetComponent<Enemy>().JumpOnHit();
+            AudioManager.instance.PlaySound("EnemyDamaged");
         }
 
-        Debug.Log("Swinging");
+        //Debug.Log("Swinging");
     }
 
     void RangedAttack()
     {
+
+        AudioManager.instance.PlaySound("Swing");
         GameObject obj = Pooler.instance.SpawnFromPool("PlayerBullet", RangedAttackSpawnPos.position, Quaternion.identity);
 
         Rigidbody2D projectileRB = obj.GetComponent<Rigidbody2D>();
