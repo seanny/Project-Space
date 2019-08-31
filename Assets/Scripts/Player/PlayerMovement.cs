@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -125,7 +126,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (groundedtime > 0)
             {
-                if (Dialog.instance.TextBox.activeInHierarchy != true) { AudioManager.instance.PlaySound("Jump"); }
+                if (Dialog.instance.TextBox.GetComponent<Image>().enabled  != true) { AudioManager.instance.PlaySound("Jump"); }
                 PressedJumpTime = 0;
                 groundedtime = 0;
                 rb.velocity = new Vector2(rb.velocity.x, JumpForce);
