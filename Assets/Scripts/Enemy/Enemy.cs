@@ -87,7 +87,7 @@ public class Enemy : MonoBehaviour
         type = EnemyType.Dead;
         rb.velocity = Vector2.zero;
         rb.isKinematic = true;
-        Collider2D[] colliders = GetComponents<Collider2D>();
+        Collider2D[] colliders = GetComponentsInChildren<Collider2D>();
         foreach (Collider2D col in colliders)
         {
             col.enabled = false;
