@@ -8,6 +8,7 @@ TagManager:
   - Door
   - E
   - Heart
+  - Projectile
   layers:
   - Default
   - TransparentFX

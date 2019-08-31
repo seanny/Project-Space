@@ -38,6 +38,7 @@ public class GameManager : MonoBehaviour
 
     IEnumerator StartingGame()
     {
+        AudioManager.instance.PlaySound("Music");
         startinggame = true;
         Fader.instance.FadeOut();
         Time.timeScale = 0;
