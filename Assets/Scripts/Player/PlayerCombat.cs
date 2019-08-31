@@ -37,7 +37,7 @@ public class PlayerCombat : MonoBehaviour
         starttimebetweenattacks = timebetweenattacks;
     }
 
-    private void LateUpdate()
+    private void Update()
     {
         timebetweenattacks -= Time.deltaTime;
         timeBetweenSword -= Time.deltaTime;
@@ -77,16 +77,16 @@ public class PlayerCombat : MonoBehaviour
             //Debug.Log("Switching weapon");
             SwitchingWeapon();
         }
-
-        if (!GameManager.instance.player.GetComponent<PlayerMovement>().facingRight)
-            shotSpeed = -Mathf.Abs(shotSpeed);
-        else
-            shotSpeed = Mathf.Abs(shotSpeed);
     }
 
     private bool InitializeHud;
     private void LateUpdate()
     {
+
+        if (!GameManager.instance.player.GetComponent<PlayerMovement>().facingRight)
+            shotSpeed = -Mathf.Abs(shotSpeed);
+        else
+            shotSpeed = Mathf.Abs(shotSpeed);
         Hud = GameObject.FindGameObjectWithTag("HUD");
         if (!InitializeHud)
         {
