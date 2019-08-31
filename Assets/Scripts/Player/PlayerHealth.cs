@@ -80,5 +80,43 @@ public class PlayerHealth : MonoBehaviour
     void Die()
     {
         AudioManager.instance.PlaySound("Death");
+        DeathMenu = GameManager.instance.deathmenu;
+        StartCoroutine(Death());
+    }
+
+    public GameObject Deathparticle;
+    public GameObject DeathMenu;
+
+    IEnumerator Death()
+    {
+        yield return null;
+        Time.timeScale = 0f;
+        DeathMenu.SetActive(true);
+        GetComponent<BoxCollider2D>().enabled = false;
+        GetComponentInChildren<SpriteRenderer>().enabled = false;
+        GetComponentInChildren<Animator>().enabled = false;
+        Destroy(Dialog.instance.GetComponent<DialogHeardBefore>());
+        Dialog.instance.gameObject.AddComponent<DialogHeardBefore>();
+
+        if (Deathparticle != null) Instantiate(Deathparticle);
+        
+        yield return new WaitForSecondsRealtime(1f);
+
+        Fader.instance.FadeOut();
+
+
+        yield return new WaitForSecondsRealtime(1f);
+
+        Animator[] anim = DeathMenu.GetComponentsInChildren<Animator>();
+        foreach (Animator anm in anim)
+        {
+            anm.SetTrigger("FadeIn");
+        }
+
+        yield return new WaitForSecondsRealtime(1f);
+        
+
+
+
     }
 }

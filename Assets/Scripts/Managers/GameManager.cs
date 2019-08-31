@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
 
     public List<int> ActiveScenes = new List<int>();
 
+    public GameObject deathmenu;
+
     private void Awake()
     {
 
@@ -60,6 +62,17 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSecondsRealtime(1f);
         AudioManager.instance.PlaySound("Music");
         startinggame = false;
+    }
+
+    public void RestartGame()
+    {
+        StartCoroutine(RestartingGame());
+    }
+
+    public IEnumerator RestartingGame()
+    {
+        AsyncOperation load = SceneManager.LoadSceneAsync(0, LoadSceneMode.Single);
+        while (!load.isDone) yield return null;
     }
 
     public void TeleportToCheckPoint()
