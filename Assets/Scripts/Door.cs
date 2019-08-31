@@ -84,10 +84,13 @@ public class Door : MonoBehaviour
 
                 if (SceneToUnloadBuildIndex != 999)
                 {
-                    AsyncOperation unload = SceneManager.UnloadSceneAsync(SceneToUnloadBuildIndex, UnloadSceneOptions.None);
-                    GameManager.instance.ActiveScenes.Remove(SceneToUnloadBuildIndex);
-                    Debug.Log(GameManager.instance.ActiveScenes);
-                    while (!unload.isDone) { yield return null; }
+                    if (GameManager.instance.ActiveScenes.Contains(SceneToUnloadBuildIndex))
+                    {
+                        AsyncOperation unload = SceneManager.UnloadSceneAsync(SceneToUnloadBuildIndex, UnloadSceneOptions.None);
+                        GameManager.instance.ActiveScenes.Remove(SceneToUnloadBuildIndex);
+                        Debug.Log(GameManager.instance.ActiveScenes);
+                        while (!unload.isDone) { yield return null; }
+                    }
                 }
             }
         }

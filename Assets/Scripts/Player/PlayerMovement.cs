@@ -56,7 +56,7 @@ public class PlayerMovement : MonoBehaviour
         Vector3 bottomleft = new Vector3(-SpriteWidth / 2, -SpriteHeight, 0);
         float DistanceBetweenRays = 2 * SpriteWidth / AmountOfRaysToCheckIfGrounded;
 
-        for (int i = 0; i <= AmountOfRaysToCheckIfGrounded; i++)
+        for (int i = 0; i <= AmountOfRaysToCheckIfGrounded - 1; i++)
         {
             Ray2D ray = new Ray2D
             {
