@@ -13,7 +13,10 @@ public class PlayerSpriteManagement : MonoBehaviour
     Rigidbody2D rb;
     bool jumped = false;
 
-    public Animator smear;
+    public Animator SwingSprite;
+
+    
+
 
     private void OnEnable()
     {
@@ -24,6 +27,14 @@ public class PlayerSpriteManagement : MonoBehaviour
     {
         InitRenderer();
         SetIdleSprite();
+
+        PlayerCombat.PlayerAttacking += AttackAnim;
+    }
+
+    void AttackAnim()
+    {
+        SwingSprite.SetTrigger("Swing");
+        anim.SetTrigger("Attack");
     }
 
     private void Update()
@@ -45,13 +56,16 @@ public class PlayerSpriteManagement : MonoBehaviour
             anim.ResetTrigger("Jump");
 
         }
-
+        /*
         if (Input.GetMouseButtonDown(0) && m_PlayerCombat.attacktodo.Equals(AttackToDo.melee))
         {
+            if (m_PlayerCombat.timebetweenattacks < 0)
+            {
+            SwingSprite.SetTrigger("Swing");
             anim.SetTrigger("Attack");
-            smear.SetTrigger("Attack");
+            }           
         }
-            
+            */
 
     }
 

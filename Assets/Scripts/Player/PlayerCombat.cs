@@ -7,6 +7,10 @@ public class PlayerCombat : MonoBehaviour
     public delegate void SwitchWeapon();
     public static event SwitchWeapon SwitchingWeapon;
 
+
+    public delegate void PlayerAttack();
+    public static event PlayerAttack PlayerAttacking;
+
     public AttackToDo attacktodo = AttackToDo.nothing;
 
     public Transform MeleeAttackSpawnPos;
@@ -17,15 +21,34 @@ public class PlayerCombat : MonoBehaviour
     private Animator GunHud;
     private Animator SwordHud;
 
+    public float timebetweenattacks = 0.4f;
+    private float starttimebetweenattacks = 0.4f;
+
     public int damage;
+
+    private void Start()
+    {
+        starttimebetweenattacks = timebetweenattacks;
+    }
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        timebetweenattacks -= Time.deltaTime;
+
+        if (Input.GetMouseButton(0))
         {
             switch (attacktodo)
             {
-                case AttackToDo.melee: MeleeAttack(); break;
+                case AttackToDo.melee:
+                    {
+                        if (timebetweenattacks < 0)
+                        {
+                            MeleeAttack();
+                            timebetweenattacks = starttimebetweenattacks;
+                            PlayerAttacking?.Invoke();
+                        }
+                        break;
+                    }
 
                 case AttackToDo.ranged: RangedAttack(); break;
 
