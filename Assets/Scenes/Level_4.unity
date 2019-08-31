@@ -1881,5 +1881,10 @@ PrefabInstance:
       propertyPath: sentences.Array.data[1]
       value: 'Hero: I must show these aliens justice as well!'
       objectReference: {fileID: 0}
+    - target: {fileID: 8447009081719657052, guid: 701d902845d803046a797321d0833d4e,
+        type: 3}
+      propertyPath: referencevariable
+      value: shiptwo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 701d902845d803046a797321d0833d4e, type: 3}

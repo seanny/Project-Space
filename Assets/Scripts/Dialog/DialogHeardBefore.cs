@@ -11,7 +11,7 @@ public class DialogHeardBefore : MonoBehaviour
     }
     [HideInInspector]
     public bool intro = false;
-    //[HideInInspector]
+    [HideInInspector]
     public bool sword = false;
     [HideInInspector]
     public bool asteroid;
@@ -19,6 +19,8 @@ public class DialogHeardBefore : MonoBehaviour
     public bool ship;
     [HideInInspector]
     public bool captain;
+    [HideInInspector]
+    public bool shiptwo;
 
     public bool GetBoolValue(string boolname, bool overRide)
     {
@@ -58,6 +60,13 @@ public class DialogHeardBefore : MonoBehaviour
                 {
                     captain = true;
                     return captain;
+                }
+            case "shiptwo":
+                if (!overRide) return shiptwo;
+                else
+                {
+                    shiptwo = true;
+                    return shiptwo;
                 }
             default:
                 return false;
