@@ -79,6 +79,8 @@ MonoBehaviour:
   playerSpotted: 0
   attackSpawnPos: {fileID: 0}
   MeleeAttackParameters: {x: 0, y: 0}
+  Deathparticle: {fileID: 4452695530059284640, guid: da4bae54637ac74479268ededfd63e1f,
+    type: 3}
 --- !u!70 &7852973275623485060
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

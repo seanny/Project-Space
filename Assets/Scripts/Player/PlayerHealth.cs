@@ -89,7 +89,6 @@ public class PlayerHealth : MonoBehaviour
 
     IEnumerator Death()
     {
-        yield return null;
         Time.timeScale = 0f;
         DeathMenu.SetActive(true);
         GetComponent<BoxCollider2D>().enabled = false;
@@ -98,7 +97,7 @@ public class PlayerHealth : MonoBehaviour
         Destroy(Dialog.instance.GetComponent<DialogHeardBefore>());
         Dialog.instance.gameObject.AddComponent<DialogHeardBefore>();
 
-        if (Deathparticle != null) Instantiate(Deathparticle);
+        if (Deathparticle != null) Instantiate(Deathparticle, transform);
         
         yield return new WaitForSecondsRealtime(1f);
 

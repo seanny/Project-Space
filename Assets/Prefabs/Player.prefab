@@ -278,6 +278,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HealthCount: 6
   Hearts: []
+  Deathparticle: {fileID: 3419259884069812170, guid: 95b7e8c97fc56b24aa18b79a57029e9e,
+    type: 3}
+  DeathMenu: {fileID: 0}
 --- !u!1 &2658320265877410623
 GameObject:
   m_ObjectHideFlags: 0

@@ -31,6 +31,7 @@ public class Enemy : MonoBehaviour
     SpriteRenderer sprite;
     internal PlayerCombat playerCombat;
     internal GameObject player;
+    public GameObject Deathparticle;
 
     private void Start()
     {
@@ -84,6 +85,7 @@ public class Enemy : MonoBehaviour
 
     IEnumerator Death()
     {
+        yield return null;
         type = EnemyType.Dead;
         rb.velocity = Vector2.zero;
         rb.isKinematic = true;
@@ -92,7 +94,8 @@ public class Enemy : MonoBehaviour
         {
             col.enabled = false;
         }
-        yield return new WaitForSeconds(1f);
+        Instantiate(Deathparticle);
+//        yield return new WaitForSeconds(1f);
         Destroy(gameObject);
     }
 

@@ -7059,7 +7059,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 1.5, y: 1.5, z: 0}
   m_MaxChunkCount: 16
@@ -12523,6 +12523,127 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 982cf061dba480041aec932ed90026ed, type: 3}
+--- !u!1001 &772232257
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1329011338798249058, guid: 701d902845d803046a797321d0833d4e,
+        type: 3}
+      propertyPath: m_Name
+      value: DialogGiver (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8213562026715974256, guid: 701d902845d803046a797321d0833d4e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 749.659
+      objectReference: {fileID: 0}
+    - target: {fileID: 8213562026715974256, guid: 701d902845d803046a797321d0833d4e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 289.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 8213562026715974256, guid: 701d902845d803046a797321d0833d4e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8213562026715974256, guid: 701d902845d803046a797321d0833d4e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8213562026715974256, guid: 701d902845d803046a797321d0833d4e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8213562026715974256, guid: 701d902845d803046a797321d0833d4e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8213562026715974256, guid: 701d902845d803046a797321d0833d4e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8213562026715974256, guid: 701d902845d803046a797321d0833d4e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8213562026715974256, guid: 701d902845d803046a797321d0833d4e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8213562026715974256, guid: 701d902845d803046a797321d0833d4e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8213562026715974256, guid: 701d902845d803046a797321d0833d4e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693321341874344070, guid: 701d902845d803046a797321d0833d4e,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 5.107956
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693321341874344070, guid: 701d902845d803046a797321d0833d4e,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 20.715912
+      objectReference: {fileID: 0}
+    - target: {fileID: 8447009081719657052, guid: 701d902845d803046a797321d0833d4e,
+        type: 3}
+      propertyPath: sentences.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8447009081719657052, guid: 701d902845d803046a797321d0833d4e,
+        type: 3}
+      propertyPath: sentences.Array.data[2]
+      value: 'Hero: Ha, defeat me? Good guys never lose pal. I am making sure that
+        space remains clean and healthy.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8447009081719657052, guid: 701d902845d803046a797321d0833d4e,
+        type: 3}
+      propertyPath: sentences.Array.data[3]
+      value: 'Morpher: We do not litter, we merely wish to make a new home for ourselves.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8447009081719657052, guid: 701d902845d803046a797321d0833d4e,
+        type: 3}
+      propertyPath: sentences.Array.data[4]
+      value: 'Hero: You think I''m going to believe that? I''m not stupid.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8447009081719657052, guid: 701d902845d803046a797321d0833d4e,
+        type: 3}
+      propertyPath: sentences.Array.data[5]
+      value: 'Morpher: So be it then.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8447009081719657052, guid: 701d902845d803046a797321d0833d4e,
+        type: 3}
+      propertyPath: sentences.Array.data[0]
+      value: 'Hero: Look at you, another filhty polluting alien.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8447009081719657052, guid: 701d902845d803046a797321d0833d4e,
+        type: 3}
+      propertyPath: sentences.Array.data[1]
+      value: 'Morpher: Enough. You have slain enough of our kind today. You must be
+        defeated.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8447009081719657052, guid: 701d902845d803046a797321d0833d4e,
+        type: 3}
+      propertyPath: referencevariable
+      value: morpher
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 701d902845d803046a797321d0833d4e, type: 3}
 --- !u!1001 &897662112
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12676,7 +12797,7 @@ PrefabInstance:
     - target: {fileID: 1434214469174756342, guid: 6514e4d416d77db4ba4a94f103402ad1,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1434214469174756341, guid: 6514e4d416d77db4ba4a94f103402ad1,
         type: 3}
@@ -12755,6 +12876,100 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6514e4d416d77db4ba4a94f103402ad1, type: 3}
+--- !u!1001 &1405875115
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1329011338798249058, guid: 701d902845d803046a797321d0833d4e,
+        type: 3}
+      propertyPath: m_Name
+      value: DialogGiver
+      objectReference: {fileID: 0}
+    - target: {fileID: 8213562026715974256, guid: 701d902845d803046a797321d0833d4e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 656.69
+      objectReference: {fileID: 0}
+    - target: {fileID: 8213562026715974256, guid: 701d902845d803046a797321d0833d4e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 198
+      objectReference: {fileID: 0}
+    - target: {fileID: 8213562026715974256, guid: 701d902845d803046a797321d0833d4e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8213562026715974256, guid: 701d902845d803046a797321d0833d4e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8213562026715974256, guid: 701d902845d803046a797321d0833d4e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8213562026715974256, guid: 701d902845d803046a797321d0833d4e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8213562026715974256, guid: 701d902845d803046a797321d0833d4e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8213562026715974256, guid: 701d902845d803046a797321d0833d4e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8213562026715974256, guid: 701d902845d803046a797321d0833d4e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8213562026715974256, guid: 701d902845d803046a797321d0833d4e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8213562026715974256, guid: 701d902845d803046a797321d0833d4e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693321341874344070, guid: 701d902845d803046a797321d0833d4e,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 3.8117447
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693321341874344070, guid: 701d902845d803046a797321d0833d4e,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 18.12349
+      objectReference: {fileID: 0}
+    - target: {fileID: 8447009081719657052, guid: 701d902845d803046a797321d0833d4e,
+        type: 3}
+      propertyPath: sentences.Array.data[0]
+      value: 'Hero: This place is infested with these little creeps!'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8447009081719657052, guid: 701d902845d803046a797321d0833d4e,
+        type: 3}
+      propertyPath: sentences.Array.data[1]
+      value: 'Hero: Time for an extermination!'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8447009081719657052, guid: 701d902845d803046a797321d0833d4e,
+        type: 3}
+      propertyPath: referencevariable
+      value: extermination
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 701d902845d803046a797321d0833d4e, type: 3}
 --- !u!1 &1438910960
 GameObject:
   m_ObjectHideFlags: 0
@@ -12824,7 +13039,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -12936,6 +13151,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1340165880118370826, guid: 96d954b7436c40a478f352a95b3e13a9,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 3.4982848
+      objectReference: {fileID: 0}
+    - target: {fileID: 1340165880118370826, guid: 96d954b7436c40a478f352a95b3e13a9,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 13.456155
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 96d954b7436c40a478f352a95b3e13a9, type: 3}
@@ -13078,7 +13303,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 1.5, y: 1.5, z: 0}
   m_MaxChunkCount: 16
