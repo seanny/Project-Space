@@ -75,7 +75,7 @@ MonoBehaviour:
   health: 0
   movSpeed: 3
   changeDirectionTime: 0
-  shotSpeed: 6
+  shotSpeed: 10
   playerSpotted: 0
   attackSpawnPos: {fileID: 0}
   MeleeAttackParameters: {x: 0, y: 0}
