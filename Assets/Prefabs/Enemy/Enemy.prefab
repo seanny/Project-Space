@@ -105,7 +105,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8822583050150654097}
   - component: {fileID: 6018671434144812834}
-  - component: {fileID: 2951250899015790239}
   m_Layer: 0
   m_Name: Colliders
   m_TagString: Untagged
@@ -153,22 +152,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 10.033135, y: 0.31}
   m_EdgeRadius: 0
---- !u!70 &2951250899015790239
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8822583050150654102}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.014942639, y: -0.07642569}
-  m_Size: {x: 1.8106265, y: 1.1642742}
-  m_Direction: 1
 --- !u!1 &8822583050826026508
 GameObject:
   m_ObjectHideFlags: 0
