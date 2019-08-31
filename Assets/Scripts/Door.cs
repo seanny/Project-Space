@@ -42,12 +42,14 @@ public class Door : MonoBehaviour
             {
                 AsyncOperation load = SceneManager.LoadSceneAsync(SceneToLoadBuildIndex, LoadSceneMode.Additive);
                 while (!load.isDone) { yield return new WaitForEndOfFrame(); }
+                GameManager.instance.ActiveScenes.Add(SceneToLoadBuildIndex);
             }
 
             if (SceneToUnloadBuildIndex != 999)
             {
                 AsyncOperation unload = SceneManager.UnloadSceneAsync(SceneToUnloadBuildIndex, UnloadSceneOptions.None);
                 while (!unload.isDone) { yield return new WaitForEndOfFrame(); }
+                if (SceneToUnloadBuildIndex != 1) GameManager.instance.ActiveScenes.Remove(SceneToUnloadBuildIndex);
             }
 
 
