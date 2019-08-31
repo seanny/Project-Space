@@ -259,7 +259,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 2048
   Hud: {fileID: 0}
-  damage: 1
+  timebetweenattacks: 0.4
+  damage: 2
 --- !u!114 &6307442650575433660
 MonoBehaviour:
   m_ObjectHideFlags: 0
