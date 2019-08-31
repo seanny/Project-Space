@@ -579,7 +579,7 @@ MonoBehaviour:
   - soundName: DeselectWeapon
     clip: {fileID: 8300000, guid: a1d2c32cd71b32b44acc2af7788c0daf, type: 3}
     volume: 0.644
-    pitch: 0.75
+    pitch: 0.52
     loop: 0
     source: {fileID: 0}
   - soundName: Death
@@ -618,15 +618,15 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  - soundName: 
-    clip: {fileID: 0}
-    volume: 0
+  - soundName: TextboxOpen
+    clip: {fileID: 8300000, guid: 91d42abdd0094b54fa21fd9fc6522730, type: 3}
+    volume: 0.401
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  - soundName: 
-    clip: {fileID: 0}
-    volume: 0
+  - soundName: TextboxClose
+    clip: {fileID: 8300000, guid: a58903512c7f9fc409398c44108f8be7, type: 3}
+    volume: 0.433
     pitch: 1
     loop: 0
     source: {fileID: 0}
