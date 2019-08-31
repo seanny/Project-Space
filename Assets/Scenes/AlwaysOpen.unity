@@ -495,7 +495,7 @@ MonoBehaviour:
   - tag: PlayerBullet
     prefab: {fileID: 4985366530737826851, guid: d70d6ebcd7e26564a82822975410e87f,
       type: 3}
-    size: 5
+    size: 15
 --- !u!4 &313027633
 Transform:
   m_ObjectHideFlags: 0
