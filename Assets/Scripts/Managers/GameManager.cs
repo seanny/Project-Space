@@ -36,6 +36,11 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        RenderSettings.skybox.SetFloat("_Rotation", Time.time * 2f);
+    }
+
     IEnumerator StartingGame()
     {
         AudioManager.instance.PlaySound("Music");
