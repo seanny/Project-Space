@@ -125,8 +125,9 @@ public class PlayerMovement : MonoBehaviour
         {
             if (groundedtime > 0)
             {
-                AudioManager.instance.PlaySound("Jump");
-                PressedJumpTime = JustPressedJumpTime;
+                if (Dialog.instance.TextBox.activeInHierarchy != true) { AudioManager.instance.PlaySound("Jump"); }
+                PressedJumpTime = 0;
+                groundedtime = 0;
                 rb.velocity = new Vector2(rb.velocity.x, JumpForce);
             }
         }
