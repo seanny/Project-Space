@@ -30,6 +30,7 @@ public class Door : MonoBehaviour
 
     IEnumerator SceneTransitions()
     {
+        Application.backgroundLoadingPriority = ThreadPriority.Low;
         if (fadetoscene)
         {
             transform.parent = GameManager.instance.transform;
