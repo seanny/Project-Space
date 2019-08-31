@@ -32,6 +32,7 @@ public class Enemy : MonoBehaviour
     internal PlayerCombat playerCombat;
     internal GameObject player;
     public GameObject Deathparticle;
+    private Color startcolor;
 
     private void Start()
     {
@@ -43,6 +44,8 @@ public class Enemy : MonoBehaviour
         playerCombat = player.GetComponent<PlayerCombat>();
 
         maxHealth = health;
+
+        startcolor = GetComponent<SpriteRenderer>().color;
 
         if (type.Equals(EnemyType.Patrol))
         {
@@ -80,7 +83,7 @@ public class Enemy : MonoBehaviour
     {
         sprite.color = Color.red;
         yield return new WaitForSeconds(.2f);
-        sprite.color = Color.white;
+        sprite.color = startcolor;
     }
 
     IEnumerator Death()
