@@ -11,7 +11,7 @@ public class Boss1 : MonoBehaviour
 
     private void OnDestroy()
     {
-        if (!DialogHeardBefore.instance.GetBoolValue("string", false))
+        if (!DialogHeardBefore.instance.GetBoolValue("sword", false))
         {
             Dialog.instance.InitializeDialog(sentences);
             DialogHeardBefore.instance.GetBoolValue("sword", true);

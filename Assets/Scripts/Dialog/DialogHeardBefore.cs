@@ -21,6 +21,10 @@ public class DialogHeardBefore : MonoBehaviour
     public bool captain;
     [HideInInspector]
     public bool shiptwo;
+    [HideInInspector]
+    public bool extermination;
+    [HideInInspector]
+    public bool morpher;
 
     public bool GetBoolValue(string boolname, bool overRide)
     {
@@ -67,6 +71,20 @@ public class DialogHeardBefore : MonoBehaviour
                 {
                     shiptwo = true;
                     return shiptwo;
+                }
+            case "extermination":
+                if (!overRide) return extermination;
+                else
+                {
+                    extermination = true;
+                    return extermination;
+                }
+            case "morpher":
+                if (!overRide) return morpher;
+                else
+                {
+                    morpher = true;
+                    return morpher;
                 }
             default:
                 return false;
