@@ -53,6 +53,7 @@ public class Dialog : MonoBehaviour
     void EndDialog()
     {
         //Debug.Log("Ending Dialog");
+        AudioManager.instance.PlaySound("TextboxClose");
         im.enabled = false;
         ContinueButton.gameObject.SetActive(false);
         textDisplay.text = "";
@@ -60,7 +61,6 @@ public class Dialog : MonoBehaviour
     }
     public IEnumerator TypeSentences()
     {
-
         textDisplay.text = "";
         yield return null;
         Time.timeScale = 0f;
@@ -70,6 +70,10 @@ public class Dialog : MonoBehaviour
         inDialog = true;
         foreach (char letters in lines[sentenceindex].ToCharArray())
         {
+        if (lines[sentenceindex].Contains("Hero:")) { AudioManager.instance.PlaySound("PlayerSpeak"); } else
+            {
+                AudioManager.instance.PlaySound("EnemySpeak");
+            }
             textDisplay.text += letters;
             yield return new WaitForSecondsRealtime(TimeBetweenLetters);
         }
@@ -85,6 +89,8 @@ public class Dialog : MonoBehaviour
             lines.Add(sentences[i]);
         }
         sentenceindex = 0;
+
+        AudioManager.instance.PlaySound("TextboxOpen");
 
         StartCoroutine(TypeSentences());
     }

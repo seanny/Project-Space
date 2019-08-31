@@ -148,14 +148,20 @@ public class PlayerCombat : MonoBehaviour
                 {
                     attacktodo = AttackToDo.ranged;
                     SwordHud.SetBool("Opened", true);
+                    AudioManager.instance.PlaySound("SelectWeapon");
                 }
-                else if (Dialog.instance.ContinueButton.activeInHierarchy != true) attacktodo = AttackToDo.nothing;
-                GunHud.SetBool("Opened", false);
+                else if (Dialog.instance.ContinueButton.activeInHierarchy != true)
+                {
+                    attacktodo = AttackToDo.nothing;
+                    AudioManager.instance.PlaySound("DeselectWeapon");
+                    GunHud.SetBool("Opened", false);
+                }
                 break;
 
             case AttackToDo.ranged:
                 attacktodo = AttackToDo.nothing;
                 SwordHud.SetBool("Opened", false);
+                AudioManager.instance.PlaySound("DeselectWeapon");
                 break;
 
             case AttackToDo.nothing:
@@ -163,6 +169,7 @@ public class PlayerCombat : MonoBehaviour
                 {
                     attacktodo = AttackToDo.melee;
                     GunHud.SetBool("Opened", true);
+                    AudioManager.instance.PlaySound("SelectWeapon");
                 }
                 break;
         }

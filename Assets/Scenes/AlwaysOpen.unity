@@ -548,13 +548,73 @@ MonoBehaviour:
   sounds:
   - soundName: Music
     clip: {fileID: 8300000, guid: 11a1dd55422d7214f9563511de74fde5, type: 3}
-    volume: 1
+    volume: 0.534
     pitch: 1
     loop: 1
     source: {fileID: 0}
-  - soundName: 
-    clip: {fileID: 0}
-    volume: 0
+  - soundName: ButtonHoverOver
+    clip: {fileID: 8300000, guid: a811fa82cd433074eb966f3d00a79d06, type: 3}
+    volume: 0.558
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+  - soundName: ButtonClick
+    clip: {fileID: 8300000, guid: 827e9cbe087aa4341b7f463f17ce7c7f, type: 3}
+    volume: 0.599
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+  - soundName: Jump
+    clip: {fileID: 8300000, guid: 2cd6a4513dcf14f42a072c43bcd35c6b, type: 3}
+    volume: 0.703
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+  - soundName: SelectWeapon
+    clip: {fileID: 8300000, guid: a1d2c32cd71b32b44acc2af7788c0daf, type: 3}
+    volume: 0.653
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+  - soundName: DeselectWeapon
+    clip: {fileID: 8300000, guid: a1d2c32cd71b32b44acc2af7788c0daf, type: 3}
+    volume: 0.644
+    pitch: 0.75
+    loop: 0
+    source: {fileID: 0}
+  - soundName: Death
+    clip: {fileID: 8300000, guid: de73933d5579fb8478c040fd0fd0138d, type: 3}
+    volume: 0.521
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - soundName: Damaged
+    clip: {fileID: 8300000, guid: ca8a578fc7b559b44922d2e80a75925d, type: 3}
+    volume: 0.48
+    pitch: 0.77
+    loop: 0
+    source: {fileID: 0}
+  - soundName: EnemyDamaged
+    clip: {fileID: 8300000, guid: ca8a578fc7b559b44922d2e80a75925d, type: 3}
+    volume: 0.507
+    pitch: 1.18
+    loop: 0
+    source: {fileID: 0}
+  - soundName: DialoguePlayer
+    clip: {fileID: 8300000, guid: a971972be4be77c4f9f9e02b149ce884, type: 3}
+    volume: 0.704
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+  - soundName: DialogueEnemy
+    clip: {fileID: 8300000, guid: 755cb77a1e2d9c94d9be6875d7620585, type: 3}
+    volume: 0.689
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+  - soundName: DeathZone
+    clip: {fileID: 8300000, guid: ba0a0517ed398d14893e3d008322dca8, type: 3}
+    volume: 0.64
     pitch: 0
     loop: 0
     source: {fileID: 0}
@@ -2628,6 +2688,7 @@ MonoBehaviour:
   asteroid: 0
   ship: 0
   captain: 0
+  shiptwo: 0
 --- !u!1 &1726713100
 GameObject:
   m_ObjectHideFlags: 0

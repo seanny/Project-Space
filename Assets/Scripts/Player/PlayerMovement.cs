@@ -121,6 +121,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (groundedtime > 0)
             {
+                AudioManager.instance.PlaySound("Jump");
                 PressedJumpTime = JustPressedJumpTime;
                 rb.velocity = new Vector2(rb.velocity.x, JumpForce);
             }
