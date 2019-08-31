@@ -11,16 +11,7 @@ public class AudioManager : MonoBehaviour
 
     private void Awake()
     {
-
-        if (instance == null)
-        {
-            instance = this;
-        }
-        else
-        {
-            Destroy(gameObject);
-            return;
-        }
+        instance = this;
 
         foreach (Sounds s in sounds)
         {
@@ -33,9 +24,9 @@ public class AudioManager : MonoBehaviour
 
             s.source.loop = s.loop;
         }
-
-        DontDestroyOnLoad(gameObject);
+    
     }
+        
 
     public void PlaySound(string SoundName)
     {
