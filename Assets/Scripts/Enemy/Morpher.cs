@@ -25,15 +25,15 @@ public class Morpher : Enemy
     public override void ReceiveDamage(int dmgAmount)
     {
         
-        if (health < maxHealth/2 && !mode.Equals(MorpherMode.Ranged) && playerCombat.attacktodo.Equals(AttackToDo.ranged))
+        if (health < maxHealth/2 && !mode.Equals(MorpherMode.Melee) && playerCombat.attacktodo.Equals(AttackToDo.ranged))
         {
-            mode = MorpherMode.Ranged;
+            mode = MorpherMode.Melee;
             InvokeRepeating("Shoot", 0f, 3f);
 
             base.ReceiveDamage(dmgAmount);
         }
 
-        if (mode.Equals(MorpherMode.Ranged) && playerCombat.attacktodo.Equals(AttackToDo.melee))
+        if (mode.Equals(MorpherMode.Melee) && playerCombat.attacktodo.Equals(AttackToDo.melee))
         {
             base.ReceiveDamage(dmgAmount);
         }
@@ -43,8 +43,8 @@ public class Morpher : Enemy
 
 public enum MorpherMode
 {
-    Melee,
-    Ranged
+    Ranged,
+    Melee
 }
 
 
