@@ -555,25 +555,25 @@ MonoBehaviour:
   - soundName: ButtonHoverOver
     clip: {fileID: 8300000, guid: a811fa82cd433074eb966f3d00a79d06, type: 3}
     volume: 0.558
-    pitch: 0
+    pitch: 1
     loop: 0
     source: {fileID: 0}
   - soundName: ButtonClick
     clip: {fileID: 8300000, guid: 827e9cbe087aa4341b7f463f17ce7c7f, type: 3}
     volume: 0.599
-    pitch: 0
+    pitch: 1
     loop: 0
     source: {fileID: 0}
   - soundName: Jump
     clip: {fileID: 8300000, guid: 2cd6a4513dcf14f42a072c43bcd35c6b, type: 3}
     volume: 0.703
-    pitch: 0
+    pitch: 1
     loop: 0
     source: {fileID: 0}
   - soundName: SelectWeapon
     clip: {fileID: 8300000, guid: a1d2c32cd71b32b44acc2af7788c0daf, type: 3}
     volume: 0.653
-    pitch: 0
+    pitch: 1
     loop: 0
     source: {fileID: 0}
   - soundName: DeselectWeapon
@@ -600,40 +600,40 @@ MonoBehaviour:
     pitch: 1.18
     loop: 0
     source: {fileID: 0}
-  - soundName: DialoguePlayer
+  - soundName: PlayerSpeak
     clip: {fileID: 8300000, guid: a971972be4be77c4f9f9e02b149ce884, type: 3}
     volume: 0.704
-    pitch: 0
+    pitch: 1
     loop: 0
     source: {fileID: 0}
-  - soundName: DialogueEnemy
+  - soundName: EnemySpeak
     clip: {fileID: 8300000, guid: 755cb77a1e2d9c94d9be6875d7620585, type: 3}
     volume: 0.689
-    pitch: 0
+    pitch: 1
     loop: 0
     source: {fileID: 0}
   - soundName: DeathZone
     clip: {fileID: 8300000, guid: ba0a0517ed398d14893e3d008322dca8, type: 3}
     volume: 0.64
-    pitch: 0
+    pitch: 1
     loop: 0
     source: {fileID: 0}
   - soundName: 
     clip: {fileID: 0}
     volume: 0
-    pitch: 0
+    pitch: 1
     loop: 0
     source: {fileID: 0}
   - soundName: 
     clip: {fileID: 0}
     volume: 0
-    pitch: 0
+    pitch: 1
     loop: 0
     source: {fileID: 0}
   - soundName: 
     clip: {fileID: 0}
     volume: 0
-    pitch: 0
+    pitch: 1
     loop: 0
     source: {fileID: 0}
 --- !u!4 &388157066
