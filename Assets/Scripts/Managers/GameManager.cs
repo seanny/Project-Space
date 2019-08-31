@@ -38,12 +38,11 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        RenderSettings.skybox.SetFloat("_Rotation", Time.time * 2f);
+        //RenderSettings.skybox.SetFloat("_Rotation", Time.time * 2f);
     }
 
     IEnumerator StartingGame()
     {
-        AudioManager.instance.PlaySound("Music");
         startinggame = true;
         Fader.instance.FadeOut();
         Time.timeScale = 0;
@@ -54,11 +53,12 @@ public class GameManager : MonoBehaviour
         {
             yield return null;
         }
+        player = FindObjectOfType<PlayerMovement>().gameObject;
         Dialog.instance.InitializeDialog(startdialog);
         Fader.instance.FadeIn();
         Time.timeScale = 1f;
-        player = FindObjectOfType<PlayerMovement>().gameObject;
         yield return new WaitForSecondsRealtime(1f);
+        AudioManager.instance.PlaySound("Music");
         startinggame = false;
     }
 
