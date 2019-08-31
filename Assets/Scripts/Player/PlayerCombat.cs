@@ -152,6 +152,7 @@ public class PlayerCombat : MonoBehaviour
                 if (Dialog.instance.ContinueButton.activeInHierarchy != true && DialogHeardBefore.instance.sword == true)
                 {
                     attacktodo = AttackToDo.ranged;
+                    GunHud.SetBool("Opened", false);
                     SwordHud.SetBool("Opened", true);
                     AudioManager.instance.PlaySound("SelectWeapon");
                 }
